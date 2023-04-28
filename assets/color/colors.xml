@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="midnight">#191825</color>
+    <color name="lavender" type="material">#865DFF</color>
+    <color name="purple_cream" type="material material-accent">#E384FF</color>
+    <color name="pink_love" type="material material-accent">#FFA3FD</color>
+    <color name="jasmine" type="material material-accent">#F8F7FF</color>
+</resources>
