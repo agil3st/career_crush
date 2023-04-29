@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
@@ -55,19 +56,10 @@ class OnBoardingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: double.infinity,
-              child: FilledButton(
-                  onPressed: () => context.go(Routes.signUp),
-                  style: const ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll(ColorName.lavender),
-                      padding: MaterialStatePropertyAll<EdgeInsets>(
-                          EdgeInsets.symmetric(vertical: 10))),
-                  child: const Text(
-                    'Register',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  )),
-            )
+                width: double.infinity,
+                child: FullButton(
+                    onPressed: () => context.go(Routes.signUp),
+                    label: 'Register'))
           ],
         ),
       ),

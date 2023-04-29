@@ -8,6 +8,7 @@ class PageScaffold extends Scaffold {
       Widget? body,
       String? title,
       bool useAppBar = true,
+      bool hideBackButton = true,
       List<Widget>? actions})
       : super(
           key: key,
@@ -18,11 +19,14 @@ class PageScaffold extends Scaffold {
                   backgroundColor: Colors.white,
                   elevation: 0,
                   title: const Logo(),
+                  titleSpacing: 30,
+                  automaticallyImplyLeading: !hideBackButton,
                   actions: actions,
                 ),
           body: Container(
             padding: const EdgeInsets.symmetric(
-                horizontal: Constants.horizontalPadding),
+              horizontal: Constants.horizontalPadding,
+            ),
             child: body,
           ),
         );
