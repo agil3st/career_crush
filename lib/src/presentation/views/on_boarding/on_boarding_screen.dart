@@ -2,11 +2,13 @@ import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
+import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: FilledButton(
-                  onPressed: () {},
+                  onPressed: () => context.go(Routes.signUp),
                   style: const ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll(ColorName.lavender),
