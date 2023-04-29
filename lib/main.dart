@@ -1,3 +1,5 @@
+import 'package:career_crush/src/config/themes/no_scroll_overlay.dart';
+import 'package:career_crush/src/config/themes/themes.dart';
 import 'package:career_crush/src/presentation/views/welcome/welcome.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      scrollBehavior: NoScrollOverlay(),
       title: Constants.appTitle,
-      home: WelcomeView(),
+      color: Colors.white,
+      theme: Themes().light,
+      home: WelcomeScreen(),
     );
   }
 }
