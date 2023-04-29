@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PageScaffold extends Scaffold {
-  PageScaffold({Key? key, Widget? body, String? title, bool useAppBar = true})
+  PageScaffold(
+      {Key? key,
+      Widget? body,
+      String? title,
+      bool useAppBar = true,
+      List<Widget>? actions})
       : super(
           key: key,
           backgroundColor: Colors.white,
@@ -15,12 +20,7 @@ class PageScaffold extends Scaffold {
                   backgroundColor: Colors.white,
                   elevation: 0,
                   title: const Logo(),
-                  actions: [
-                    IconButton(
-                      icon: SvgPicture.asset(Assets.images.icons.apps.setting),
-                      onPressed: () {},
-                    )
-                  ],
+                  actions: actions,
                 ),
           body: Container(
             padding: const EdgeInsets.symmetric(
