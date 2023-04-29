@@ -4,5 +4,5 @@ class Constants {
 
   /* Spaces */
   static const double horizontalPadding = 30;
-  static const double welcomeTopPadding = 100;
+  static const double welcomeTopPadding = 70;
 }
