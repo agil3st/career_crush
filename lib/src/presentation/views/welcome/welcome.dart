@@ -1,6 +1,6 @@
 import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
-import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
+import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageScaffold(
+    return WelcomeScaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: Constants.welcomeTopPadding),
         child: Column(
@@ -27,7 +27,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 80),
-                  child: Assets.images.illustrations.welcome.image(),
+                  child: Assets.images.illustrations.welcome.svg(),
                 ),
                 const Text(
                   'We bring the best for you',
