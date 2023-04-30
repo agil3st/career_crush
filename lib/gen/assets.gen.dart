@@ -36,12 +36,16 @@ class $AssetsImagesIconsGen {
 class $AssetsImagesIllustrationsGen {
   const $AssetsImagesIllustrationsGen();
 
+  /// File path: assets/images/illustrations/forgot-password.svg
+  SvgGenImage get forgotPassword =>
+      const SvgGenImage('assets/images/illustrations/forgot-password.svg');
+
   /// File path: assets/images/illustrations/welcome.svg
   SvgGenImage get welcome =>
       const SvgGenImage('assets/images/illustrations/welcome.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [welcome];
+  List<SvgGenImage> get values => [forgotPassword, welcome];
 }
 
 class $AssetsImagesIconsAppsGen {
