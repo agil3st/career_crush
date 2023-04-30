@@ -1,6 +1,6 @@
 import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
-import 'package:career_crush/src/presentation/pages/home/teaser_section.dart';
+import 'package:career_crush/src/presentation/pages/home/cards_holder.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          TeaserSection(
+          CardsHolder(
             title: 'Featured Jobs',
             child: SizedBox(
               height: 130,
@@ -194,7 +194,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          TeaserSection(
+          CardsHolder(
             title: 'Recommended',
             child: SizedBox(
               height: 180,

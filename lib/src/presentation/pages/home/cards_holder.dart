@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-class TeaserSection extends StatelessWidget {
+class CardsHolder extends StatelessWidget {
   final Widget child;
   final String title;
   final GestureTapCallback? onTap;
-  const TeaserSection(
+  const CardsHolder(
       {super.key, required this.child, required this.title, this.onTap});
 
   @override
