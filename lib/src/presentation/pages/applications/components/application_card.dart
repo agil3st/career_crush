@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
+import 'package:career_crush/src/presentation/widgets/buttons/small_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
@@ -69,24 +70,9 @@ class ApplicationCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    width: 80,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: const Text(
-                        'Delivered',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                  const SmallButton(
+                    label: 'Delivered',
+                    color: Colors.green,
                   )
                 ],
               ),
