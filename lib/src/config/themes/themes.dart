@@ -5,9 +5,17 @@ class Themes {
   final String primaryFont = Constants.fontFamily;
 
   ThemeData get light => ThemeData(
-      fontFamily: primaryFont,
-      textButtonTheme: const TextButtonThemeData(
-        style: ButtonStyle(
-            foregroundColor: MaterialStatePropertyAll<Color>(Colors.black)),
-      ));
+        fontFamily: primaryFont,
+        textButtonTheme: const TextButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStatePropertyAll<Color>(Colors.black),
+          ),
+        ),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(
+            fontSize: 12,
+            height: 1.5,
+          ),
+        ),
+      );
 }

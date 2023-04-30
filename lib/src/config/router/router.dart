@@ -8,6 +8,7 @@ import 'package:career_crush/src/presentation/pages/event/event_screen.dart';
 import 'package:career_crush/src/presentation/pages/explore/explore_screen.dart';
 import 'package:career_crush/src/presentation/pages/home/home_screen.dart';
 import 'package:career_crush/src/presentation/pages/index/index_screen.dart';
+import 'package:career_crush/src/presentation/pages/job_detail/job_detail_screen.dart';
 import 'package:career_crush/src/presentation/pages/on_boarding/on_boarding_screen.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,10 @@ class AppRouter {
       GoRoute(
         path: Routes.index,
         builder: (context, state) => const IndexScreen(),
+      ),
+      GoRoute(
+        path: Routes.jobDetail,
+        builder: (context, state) => const JobDetailScreen(),
       ),
     ],
   );
