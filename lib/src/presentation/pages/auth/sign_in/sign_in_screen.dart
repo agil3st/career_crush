@@ -102,7 +102,7 @@ class SignInScreen extends StatelessWidget {
                   width: double.infinity,
                   padding: const EdgeInsets.fromLTRB(0, 60, 0, 20),
                   child: FullButton(
-                    onPressed: () {},
+                    onPressed: () => context.go(Routes.home),
                     label: 'Sign In',
                   ),
                 ),

@@ -70,7 +70,10 @@ class SignUpScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.fromLTRB(0, 40, 0, 20),
-                  child: FullButton(onPressed: () {}, label: 'Sign Up'),
+                  child: FullButton(
+                    onPressed: () => context.go(Routes.home),
+                    label: 'Sign Up',
+                  ),
                 ),
                 RichText(
                   textAlign: TextAlign.center,
