@@ -29,8 +29,7 @@ class PageScaffold extends Scaffold {
                         ),
                       ),
                   titleSpacing: hideBackButton ? 20 : 0,
-                  automaticallyImplyLeading: !hideBackButton,
-                  leading: const BackButton(),
+                  leading: hideBackButton ? null : const BackButton(),
                   iconTheme: const IconThemeData(
                     color: ColorName.midnight,
                   ),
