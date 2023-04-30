@@ -12,6 +12,7 @@ class PageScaffold extends Scaffold {
     bool useAppBar = true,
     bool hideBackButton = false,
     List<Widget>? actions,
+    PreferredSizeWidget? bottomAppBar,
   }) : super(
           key: key,
           backgroundColor: Colors.white,
@@ -34,6 +35,7 @@ class PageScaffold extends Scaffold {
                     color: ColorName.midnight,
                   ),
                   actions: actions,
+                  bottom: bottomAppBar,
                 ),
           body: body,
         );
