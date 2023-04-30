@@ -1,5 +1,4 @@
 import 'package:career_crush/src/presentation/widgets/logo/logo.dart';
-import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class PageScaffold extends Scaffold {
@@ -19,15 +18,10 @@ class PageScaffold extends Scaffold {
                   backgroundColor: Colors.white,
                   elevation: 0,
                   title: const Logo(),
-                  titleSpacing: 30,
+                  titleSpacing: 20,
                   automaticallyImplyLeading: !hideBackButton,
                   actions: actions,
                 ),
-          body: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: Constants.horizontalPadding,
-            ),
-            child: body,
-          ),
+          body: body,
         );
 }
