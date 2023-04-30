@@ -2,15 +2,28 @@ import 'package:career_crush/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 
 class FullButton extends FilledButton {
-  FullButton({required super.onPressed, required String label})
-      : super(
-          style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(ColorName.lavender),
-              padding: MaterialStatePropertyAll<EdgeInsets>(
-                  EdgeInsets.symmetric(vertical: 10))),
+  FullButton({
+    super.key,
+    required super.onPressed,
+    required String label,
+    EdgeInsets? padding,
+    Color? color,
+    double fontSize = 18,
+  }) : super(
+          style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(
+              color ?? ColorName.lavender,
+            ),
+            padding: MaterialStatePropertyAll<EdgeInsets>(
+              padding ?? const EdgeInsets.symmetric(vertical: 10),
+            ),
+          ),
           child: Text(
             label,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: fontSize,
+            ),
           ),
         );
 }
