@@ -14,6 +14,7 @@ class WelcomeScaffold extends PageScaffold {
     bool showFooter = true,
     EdgeInsets? padding,
     List<Widget>? actions,
+    super.bottomAppBar,
   }) : super(
           key: key,
           titleWidget: const Logo(),
