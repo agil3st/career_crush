@@ -42,6 +42,11 @@ class SignUpScreen extends StatelessWidget {
               child: Column(
                 children: [
                   CustomTextField(
+                    label: 'Username',
+                    hint: 'johnDoe007',
+                  ),
+                  CustomTextField.verticalSpacing,
+                  CustomTextField(
                     label: 'Email',
                     hint: 'johndoe@email.com',
                   ),
@@ -52,43 +57,11 @@ class SignUpScreen extends StatelessWidget {
                     obscureText: true,
                   ),
                   CustomTextField.verticalSpacing,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            constraints: const BoxConstraints(),
-                            padding: EdgeInsets.zero,
-                            icon: const Icon(
-                              FeatherIcons.checkSquare,
-                              size: 16,
-                            ),
-                          ),
-                          const SizedBox(width: 2),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 2),
-                            child: Text(
-                              'Remember me',
-                              style: TextStyle(
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      InkWell(
-                        child: Text(
-                          'Forgot password?',
-                          style: TextStyle(
-                            color: Colors.grey.shade400,
-                            fontSize: 12,
-                          ),
-                        ),
-                      )
-                    ],
-                  )
+                  CustomTextField(
+                    label: 'Confirm Password',
+                    hint: 'Enter your password one more time',
+                    obscureText: true,
+                  ),
                 ],
               ),
             ),
@@ -97,7 +70,7 @@ class SignUpScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.fromLTRB(0, 40, 0, 20),
-                  child: FullButton(onPressed: () {}, label: 'Register'),
+                  child: FullButton(onPressed: () {}, label: 'Sign Up'),
                 ),
                 RichText(
                   textAlign: TextAlign.center,
