@@ -1,4 +1,5 @@
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
+import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScaffold extends PageScaffold {
@@ -8,7 +9,12 @@ class WelcomeScaffold extends PageScaffold {
           key: key,
           body: Stack(
             children: [
-              body,
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: Constants.horizontalPadding,
+                ),
+                child: body,
+              ),
               Positioned(
                   bottom: 10,
                   left: 0,
