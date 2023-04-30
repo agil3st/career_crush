@@ -1,3 +1,4 @@
+import 'package:career_crush/src/presentation/widgets/logo/logo.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,8 @@ class WelcomeScaffold extends PageScaffold {
       {Key? key, required Widget body, String? title, bool useAppBar = true})
       : super(
           key: key,
+          titleWidget: const Logo(),
+          hideBackButton: true,
           body: Stack(
             children: [
               Padding(
