@@ -17,8 +17,7 @@ class SignUpScreen extends StatelessWidget {
     return WelcomeScaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: Constants.welcomeTopPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
