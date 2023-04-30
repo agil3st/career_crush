@@ -6,6 +6,7 @@ class SmallButton extends StatelessWidget {
   final Color? color;
   final Color? labelColor;
   final GestureTapCallback? onTap;
+  final TextStyle? textStyle;
   const SmallButton({
     super.key,
     required this.label,
@@ -13,6 +14,7 @@ class SmallButton extends StatelessWidget {
     this.color,
     this.labelColor,
     this.onTap,
+    this.textStyle,
   });
 
   @override
@@ -30,10 +32,11 @@ class SmallButton extends StatelessWidget {
           child: Text(
             label,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 10,
-              color: labelColor ?? Colors.white,
-            ),
+            style: textStyle ??
+                TextStyle(
+                  fontSize: 10,
+                  color: labelColor ?? Colors.white,
+                ),
           ),
         ),
       ),
