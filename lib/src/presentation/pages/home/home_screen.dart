@@ -13,12 +13,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageScaffold(
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Assets.images.icons.apps.setting.svg(),
-        ),
-      ],
       body: Column(
         children: [
           Container(
