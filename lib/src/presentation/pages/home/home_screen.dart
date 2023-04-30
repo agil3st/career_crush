@@ -2,8 +2,10 @@ import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/pages/home/cards_holder.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
+import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -104,89 +106,92 @@ class HomeScreen extends StatelessWidget {
               child: ListView.separated(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => Container(
-                  padding: const EdgeInsets.all(10),
-                  width: 250,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: Colors.grey.shade300),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.network(
-                            'https://uilogos.co/img/logomark/tvit.png',
-                            width: 50,
-                          ),
-                          const SizedBox(width: 8),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'Finance Officer',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'PT. Tvit Indonesia',
-                                style: TextStyle(
-                                  color: Colors.grey.shade400,
-                                  fontSize: 11,
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    FeatherIcons.star,
-                                    size: 12,
-                                    color: Colors.yellow.shade800,
-                                  ),
-                                  const SizedBox(width: 2),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 2),
-                                    child: Text(
-                                      '4.8',
-                                      style: TextStyle(fontSize: 10),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: const [
-                              Icon(
-                                FeatherIcons.mapPin,
-                                size: 12,
-                              ),
-                              SizedBox(width: 2),
-                              Text(
-                                'Jakarta, Indonesia',
-                                style: TextStyle(fontSize: 10),
-                              )
-                            ],
-                          ),
-                          const Text(
-                            'Full Time',
-                            style: TextStyle(
-                              fontSize: 10,
-                              color: ColorName.lavender,
+                itemBuilder: (context, index) => InkWell(
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    width: 250,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.network(
+                              'https://uilogos.co/img/logomark/tvit.png',
+                              width: 50,
                             ),
-                          )
-                        ],
-                      )
-                    ],
+                            const SizedBox(width: 8),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'Finance Officer',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                                Text(
+                                  'PT. Tvit Indonesia',
+                                  style: TextStyle(
+                                    color: Colors.grey.shade400,
+                                    fontSize: 11,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      FeatherIcons.star,
+                                      size: 12,
+                                      color: Colors.yellow.shade800,
+                                    ),
+                                    const SizedBox(width: 2),
+                                    const Padding(
+                                      padding: EdgeInsets.only(top: 2),
+                                      child: Text(
+                                        '4.8',
+                                        style: TextStyle(fontSize: 10),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: const [
+                                Icon(
+                                  FeatherIcons.mapPin,
+                                  size: 12,
+                                ),
+                                SizedBox(width: 2),
+                                Text(
+                                  'Jakarta, Indonesia',
+                                  style: TextStyle(fontSize: 10),
+                                )
+                              ],
+                            ),
+                            const Text(
+                              'Full Time',
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: ColorName.lavender,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
+                  onTap: () => context.push(Routes.jobDetail),
                 ),
                 separatorBuilder: (context, index) => const SizedBox(width: 20),
                 itemCount: 5,
