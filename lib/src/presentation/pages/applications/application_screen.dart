@@ -10,7 +10,6 @@ class ApplicationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return WelcomeScaffold(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      showSettingsButton: true,
       showFooter: false,
       body: Column(
         children: const [
