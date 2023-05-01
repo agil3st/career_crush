@@ -2,6 +2,7 @@ import 'package:career_crush/src/presentation/pages/event/components/event_list.
 import 'package:career_crush/src/presentation/pages/event/components/search_bar.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class EventScreen extends StatelessWidget {
   const EventScreen({super.key});
@@ -11,6 +12,12 @@ class EventScreen extends StatelessWidget {
     return WelcomeScaffold(
       showFooter: false,
       padding: EdgeInsets.zero,
+      actions: [
+        IconButton(
+          icon: const Icon(FeatherIcons.search),
+          onPressed: () {},
+        )
+      ],
       bottomAppBar: const PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: Padding(
