@@ -9,7 +9,6 @@ class EventScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WelcomeScaffold(
-      showSettingsButton: true,
       showFooter: false,
       padding: EdgeInsets.zero,
       bottomAppBar: const PreferredSize(
