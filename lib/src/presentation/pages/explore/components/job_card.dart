@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/small_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
@@ -138,19 +137,19 @@ class JobCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'Full Time',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 10,
                     ),
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.fromLTRB(2, 1, 2, 0),
                     child: Text('•'),
                   ),
-                  const Text(
+                  Text(
                     'Remote',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
