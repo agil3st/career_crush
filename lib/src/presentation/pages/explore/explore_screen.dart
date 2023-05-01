@@ -1,4 +1,5 @@
 import 'package:career_crush/gen/assets.gen.dart';
+import 'package:career_crush/src/presentation/pages/event/components/search_bar.dart';
 import 'package:career_crush/src/presentation/pages/explore/components/job_list.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,13 @@ class ExploreScreen extends StatelessWidget {
           icon: const Icon(FeatherIcons.filter),
         )
       ],
+      bottomAppBar: const PreferredSize(
+        preferredSize: Size.fromHeight(70),
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+          child: SearchBar(),
+        ),
+      ),
       body: const JobList(),
     );
   }
