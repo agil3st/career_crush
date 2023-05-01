@@ -41,7 +41,7 @@ class JobQualification extends StatelessWidget {
             styleSheet: MarkdownStyleSheet.fromTheme(Themes().light).copyWith(
               pPadding: EdgeInsets.zero,
               listBulletPadding: EdgeInsets.zero,
-              listBullet: TextStyle(fontSize: 16, height: 0),
+              listBullet: const TextStyle(fontSize: 16, height: 0),
               listIndent: 16,
             ),
           ),

@@ -6,7 +6,6 @@ import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:go_router/go_router.dart';
 
 class SignUpScreen extends StatelessWidget {

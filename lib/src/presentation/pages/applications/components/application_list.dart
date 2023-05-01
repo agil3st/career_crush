@@ -9,9 +9,9 @@ class ApplicationList extends StatelessWidget {
     return ListView.separated(
       itemCount: 10,
       shrinkWrap: true,
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 80),
-      itemBuilder: (context, index) => ApplicationCard(),
-      separatorBuilder: (context, index) => SizedBox(height: 20),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, 80),
+      itemBuilder: (context, index) => const ApplicationCard(),
+      separatorBuilder: (context, index) => const SizedBox(height: 20),
     );
   }
 }

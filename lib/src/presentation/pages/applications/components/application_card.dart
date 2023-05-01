@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/small_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
@@ -54,21 +53,18 @@ class ApplicationCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    // color: Colors.pink,
-                    child: Row(
-                      children: const [
-                        Icon(
-                          FeatherIcons.mapPin,
-                          size: 12,
-                        ),
-                        SizedBox(width: 2),
-                        Text(
-                          'Jakarta, Indonesia',
-                          style: TextStyle(fontSize: 10),
-                        )
-                      ],
-                    ),
+                  Row(
+                    children: const [
+                      Icon(
+                        FeatherIcons.mapPin,
+                        size: 12,
+                      ),
+                      SizedBox(width: 2),
+                      Text(
+                        'Jakarta, Indonesia',
+                        style: TextStyle(fontSize: 10),
+                      )
+                    ],
                   ),
                   const SmallButton(
                     label: 'Delivered',

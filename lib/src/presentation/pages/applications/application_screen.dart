@@ -1,4 +1,3 @@
-import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/pages/applications/components/application_list.dart';
 import 'package:career_crush/src/presentation/pages/applications/components/application_tabs.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
