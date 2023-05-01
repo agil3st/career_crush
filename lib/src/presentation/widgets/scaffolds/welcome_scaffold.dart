@@ -27,6 +27,7 @@ class WelcomeScaffold extends PageScaffold {
                     onPressed: () {},
                     icon: Assets.images.icons.apps.setting.svg(),
                   ),
+            const SizedBox(width: 10),
           ],
           body: Stack(
             children: [
