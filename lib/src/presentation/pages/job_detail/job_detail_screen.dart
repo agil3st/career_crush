@@ -18,7 +18,7 @@ class JobDetailScreen extends StatelessWidget {
         children: [
           Scrollbar(
             interactive: true,
-            thickness: 8,
+            thickness: 6,
             radius: const Radius.circular(10),
             child: SingleChildScrollView(
               child: Column(

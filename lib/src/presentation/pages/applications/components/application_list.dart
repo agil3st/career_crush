@@ -1,4 +1,5 @@
 import 'package:career_crush/src/presentation/pages/applications/components/application_card.dart';
+import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class ApplicationList extends StatelessWidget {
@@ -9,7 +10,7 @@ class ApplicationList extends StatelessWidget {
     return ListView.separated(
       itemCount: 10,
       shrinkWrap: true,
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 80),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, Constants.bottomListPadding),
       itemBuilder: (context, index) => const ApplicationCard(),
       separatorBuilder: (context, index) => const SizedBox(height: 20),
     );

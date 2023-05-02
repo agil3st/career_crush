@@ -4,6 +4,7 @@ import 'package:career_crush/src/presentation/pages/home/greeting.dart';
 import 'package:career_crush/src/presentation/pages/home/recent_jobs.dart';
 import 'package:career_crush/src/presentation/pages/home/recommended_jobs.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
+import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomeScreen extends StatelessWidget {
       showSettingsButton: true,
       showFooter: false,
       body: ListView(
-        padding: const EdgeInsets.only(bottom: 120),
+        padding: const EdgeInsets.only(bottom: Constants.bottomListPadding),
         children: const [
           Greeting(),
           Articles(),
