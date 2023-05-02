@@ -1,3 +1,4 @@
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/pages/explore/components/job_card.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
@@ -10,9 +11,9 @@ class JobList extends StatelessWidget {
     return ListView.separated(
       padding:
           const EdgeInsets.fromLTRB(20, 20, 20, Constants.bottomListPadding),
-      itemBuilder: (context, index) => const JobCard(),
+      itemBuilder: (context, index) => JobCard(job: Job.jobList[index]),
       separatorBuilder: (context, index) => const SizedBox(height: 20),
-      itemCount: 10,
+      itemCount: Job.jobList.length,
     );
   }
 }

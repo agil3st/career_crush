@@ -1,10 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class JobCard extends StatelessWidget {
-  const JobCard({super.key});
+  final Job job;
+  const JobCard({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
@@ -20,23 +22,23 @@ class JobCard extends StatelessWidget {
           Row(
             children: [
               CachedNetworkImage(
-                imageUrl: 'https://uilogos.co/img/logomark/treva.png',
+                imageUrl: job.company.logoUrl,
                 width: 50,
               ),
               const SizedBox(width: 8),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    'UI/UX Designer',
-                    style: TextStyle(
+                    job.title,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
                   ),
                   Text(
-                    'PT. Astro Indonesia Sentosa',
-                    style: TextStyle(
+                    job.company.name,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: ColorName.lavender,
                       fontSize: 14,
@@ -58,11 +60,11 @@ class JobCard extends StatelessWidget {
                     color: Colors.grey.shade500,
                   ),
                   const SizedBox(width: 4),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 1),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 1),
                     child: Text(
-                      'Rp. 3.5jt - 5jt',
-                      style: TextStyle(
+                      job.salary,
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
                       ),
@@ -78,11 +80,11 @@ class JobCard extends StatelessWidget {
                     color: Colors.grey.shade500,
                   ),
                   const SizedBox(width: 4),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 2),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
                     child: Text(
-                      'Pengalaman 0-1 Tahun',
-                      style: TextStyle(
+                      job.experience,
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
                       ),
@@ -98,11 +100,11 @@ class JobCard extends StatelessWidget {
                     color: Colors.grey.shade500,
                   ),
                   const SizedBox(width: 4),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 2),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
                     child: Text(
-                      'Min. SMA/SMK/D3',
-                      style: TextStyle(
+                      job.graduation,
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
                       ),
@@ -118,11 +120,11 @@ class JobCard extends StatelessWidget {
                     color: Colors.grey.shade500,
                   ),
                   const SizedBox(width: 4),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 2),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
                     child: Text(
-                      'Max. 12 Juni 2023',
-                      style: TextStyle(
+                      job.deadline,
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
                       ),
@@ -137,21 +139,21 @@ class JobCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
+                children: [
                   Text(
-                    'Full Time',
-                    style: TextStyle(
+                    job.type,
+                    style: const TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 10,
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.fromLTRB(2, 1, 2, 0),
                     child: Text('•'),
                   ),
                   Text(
-                    'Remote',
-                    style: TextStyle(
+                    job.baseLocation,
+                    style: const TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 10,
                     ),
@@ -159,15 +161,15 @@ class JobCard extends StatelessWidget {
                 ],
               ),
               Row(
-                children: const [
-                  Icon(
+                children: [
+                  const Icon(
                     FeatherIcons.mapPin,
                     size: 12,
                   ),
-                  SizedBox(width: 2),
+                  const SizedBox(width: 2),
                   Text(
-                    'Jakarta, Indonesia',
-                    style: TextStyle(fontSize: 10),
+                    job.company.location.place,
+                    style: const TextStyle(fontSize: 10),
                   )
                 ],
               ),

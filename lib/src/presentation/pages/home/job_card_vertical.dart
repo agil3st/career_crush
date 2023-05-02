@@ -1,17 +1,19 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
 import 'package:career_crush/src/presentation/widgets/shimmers/shimmer_square.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class JobCardVertical extends StatelessWidget {
-  const JobCardVertical({super.key});
+  final Job job;
+  const JobCardVertical({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: 170,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: ColorName.jasmine.shade900,
@@ -33,24 +35,24 @@ class JobCardVertical extends StatelessWidget {
                 ),
                 child: Center(
                   child: CachedNetworkImage(
-                    height: 50,
-                    imageUrl: 'https://uilogos.co/img/logomark/treva.png',
+                    height: 70,
+                    imageUrl: job.company.logoUrl,
                     placeholder: (context, url) =>
                         const ShimmerSquare(size: 50),
                   ),
                 ),
               ),
               const SizedBox(height: 4),
-              const Text(
-                'UI/UX Designer',
-                style: TextStyle(
+              Text(
+                job.title,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 13,
+                  fontSize: 12,
                 ),
               ),
-              const Text(
-                'PT. Vorza Alam Indah',
-                style: TextStyle(
+              Text(
+                job.company.name,
+                style: const TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 10,
                 ),
@@ -62,9 +64,9 @@ class JobCardVertical extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                'Full Time',
-                style: TextStyle(
+              Text(
+                job.type,
+                style: const TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w500,
                   color: ColorName.lavender,
@@ -78,11 +80,11 @@ class JobCardVertical extends StatelessWidget {
                     color: Colors.yellow.shade800,
                   ),
                   const SizedBox(width: 2),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 2),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
                     child: Text(
-                      '4.8',
-                      style: TextStyle(fontSize: 10),
+                      '${job.rating}',
+                      style: const TextStyle(fontSize: 10),
                     ),
                   ),
                 ],

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/widgets/shimmers/shimmer_square.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,8 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:go_router/go_router.dart';
 
 class JobCardTile extends StatelessWidget {
-  const JobCardTile({super.key});
+  final Job job;
+  const JobCardTile({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
@@ -27,22 +29,22 @@ class JobCardTile extends StatelessWidget {
               children: [
                 CachedNetworkImage(
                   height: 50,
-                  imageUrl: 'https://uilogos.co/img/logomark/tvit.png',
+                  imageUrl: job.company.logoUrl,
                   placeholder: (context, url) => const ShimmerSquare(size: 50),
                 ),
                 const SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Finance Officer',
-                      style: TextStyle(
+                    Text(
+                      job.title,
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
                       ),
                     ),
                     Text(
-                      'PT. Tvit Indonesia',
+                      job.company.name,
                       style: TextStyle(
                         color: Colors.grey.shade500,
                         fontSize: 11,
@@ -56,11 +58,11 @@ class JobCardTile extends StatelessWidget {
                           color: Colors.yellow.shade800,
                         ),
                         const SizedBox(width: 2),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 2),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 2),
                           child: Text(
-                            '4.8',
-                            style: TextStyle(fontSize: 10),
+                            '${job.rating}',
+                            style: const TextStyle(fontSize: 10),
                           ),
                         ),
                       ],
@@ -73,21 +75,21 @@ class JobCardTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  children: const [
-                    Icon(
+                  children: [
+                    const Icon(
                       FeatherIcons.mapPin,
                       size: 12,
                     ),
-                    SizedBox(width: 2),
+                    const SizedBox(width: 2),
                     Text(
-                      'Jakarta, Indonesia',
-                      style: TextStyle(fontSize: 10),
+                      job.company.location.place,
+                      style: const TextStyle(fontSize: 10),
                     )
                   ],
                 ),
-                const Text(
-                  'Full Time',
-                  style: TextStyle(
+                Text(
+                  job.type,
+                  style: const TextStyle(
                     fontSize: 10,
                     color: ColorName.lavender,
                   ),
