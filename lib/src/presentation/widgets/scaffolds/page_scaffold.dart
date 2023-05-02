@@ -11,6 +11,7 @@ class PageScaffold extends Scaffold {
     Widget? titleWidget,
     bool useAppBar = true,
     bool hideBackButton = false,
+    bool centerTitle = false,
     List<Widget>? actions,
     PreferredSizeWidget? bottomAppBar,
   }) : super(
@@ -21,6 +22,7 @@ class PageScaffold extends Scaffold {
               : AppBar(
                   backgroundColor: Colors.white,
                   elevation: 0,
+                  centerTitle: centerTitle,
                   title: titleWidget ??
                       Text(
                         title ?? '',
@@ -30,6 +32,7 @@ class PageScaffold extends Scaffold {
                         ),
                       ),
                   titleSpacing: hideBackButton ? 20 : 0,
+                  automaticallyImplyLeading: !hideBackButton,
                   leading: hideBackButton ? null : const BackButton(),
                   iconTheme: const IconThemeData(
                     color: ColorName.midnight,
