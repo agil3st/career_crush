@@ -40,7 +40,7 @@ class JobCardVertical extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 5),
+              const SizedBox(height: 4),
               const Text(
                 'UI/UX Designer',
                 style: TextStyle(
@@ -48,6 +48,14 @@ class JobCardVertical extends StatelessWidget {
                   fontSize: 13,
                 ),
               ),
+              const Text(
+                'PT. Vorza Alam Indah',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 10,
+                ),
+              ),
+              const SizedBox(height: 4),
               const JobLocation(location: 'Jakarta, Indonesia'),
             ],
           ),
@@ -58,6 +66,7 @@ class JobCardVertical extends StatelessWidget {
                 'Full Time',
                 style: TextStyle(
                   fontSize: 10,
+                  fontWeight: FontWeight.w500,
                   color: ColorName.lavender,
                 ),
               ),
