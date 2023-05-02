@@ -5,18 +5,21 @@ import 'package:career_crush/src/presentation/pages/auth/forgot_password/forgot_
 import 'package:career_crush/src/presentation/pages/auth/sign_in/sign_in_screen.dart';
 import 'package:career_crush/src/presentation/pages/auth/sign_up/sign_up_screen.dart';
 import 'package:career_crush/src/presentation/pages/event/event_screen.dart';
+import 'package:career_crush/src/presentation/pages/explore/components/job_filter/job_fiter.dart';
 import 'package:career_crush/src/presentation/pages/explore/explore_screen.dart';
 import 'package:career_crush/src/presentation/pages/home/home_screen.dart';
 import 'package:career_crush/src/presentation/pages/index/index_screen.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/job_detail_screen.dart';
 import 'package:career_crush/src/presentation/pages/on_boarding/on_boarding_screen.dart';
+import 'package:career_crush/src/presentation/pages/profile/profile_screen.dart';
+import 'package:career_crush/src/presentation/pages/settings/settings_screen.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final router = GoRouter(
-    initialLocation: Routes.onBoarding,
+    // initialLocation: Routes.onBoarding,
     routes: [
       GoRoute(
         path: Routes.onBoarding,
@@ -41,6 +44,18 @@ class AppRouter {
       GoRoute(
         path: Routes.jobDetail,
         builder: (context, state) => const JobDetailScreen(),
+      ),
+      GoRoute(
+        path: Routes.jobFilter,
+        builder: (context, state) => const JobFilter(),
+      ),
+      GoRoute(
+        path: Routes.profile,
+        builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: Routes.settings,
+        builder: (context, state) => const SettingScreen(),
       ),
     ],
   );
