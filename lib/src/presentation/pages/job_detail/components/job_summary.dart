@@ -1,4 +1,5 @@
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
@@ -14,34 +15,22 @@ class JobSummary extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
+            children: const [
+              Text(
                 'UI/UX Designer',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
               ),
-              const Text(
+              Text(
                 'Full Time',
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
               ),
-              Row(
-                children: const [
-                  Icon(
-                    FeatherIcons.mapPin,
-                    size: 12,
-                  ),
-                  SizedBox(width: 2),
-                  Text(
-                    'Jakarta, Indonesia',
-                    style: TextStyle(fontSize: 10),
-                  )
-                ],
-              ),
+              JobLocation(location: 'Jakarta, Indonesia'),
             ],
           ),
           Column(
