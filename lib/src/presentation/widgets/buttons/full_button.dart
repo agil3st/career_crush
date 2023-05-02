@@ -8,6 +8,7 @@ class FullButton extends FilledButton {
     required String label,
     EdgeInsets? padding,
     Color? color,
+    Widget? text,
     double fontSize = 18,
   }) : super(
           style: ButtonStyle(
@@ -18,12 +19,13 @@ class FullButton extends FilledButton {
               padding ?? const EdgeInsets.symmetric(vertical: 10),
             ),
           ),
-          child: Text(
-            label,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: fontSize,
-            ),
-          ),
+          child: text ??
+              Text(
+                label,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: fontSize,
+                ),
+              ),
         );
 }
