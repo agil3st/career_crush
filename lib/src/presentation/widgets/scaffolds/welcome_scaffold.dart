@@ -1,4 +1,4 @@
-import 'package:career_crush/gen/assets.gen.dart';
+import 'package:career_crush/src/presentation/pages/settings/components/settings_button.dart';
 import 'package:career_crush/src/presentation/widgets/logo/logo.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
@@ -21,12 +21,7 @@ class WelcomeScaffold extends PageScaffold {
           hideBackButton: true,
           actions: [
             if (actions != null) ...actions,
-            !showSettingsButton
-                ? Container()
-                : IconButton(
-                    onPressed: () {},
-                    icon: Assets.images.icons.apps.setting.svg(),
-                  ),
+            !showSettingsButton ? Container() : const SettingsButton(),
             const SizedBox(width: 10),
           ],
           body: Stack(
