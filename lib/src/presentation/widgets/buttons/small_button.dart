@@ -2,19 +2,25 @@ import 'package:flutter/material.dart';
 
 class SmallButton extends StatelessWidget {
   final String label;
-  final double size;
+  final double? size;
   final Color? color;
   final Color? labelColor;
   final GestureTapCallback? onTap;
   final TextStyle? textStyle;
+  final double fontSize;
+  final double horizontalPadding;
+  final double verticalPadding;
   const SmallButton({
     super.key,
     required this.label,
-    this.size = 80,
+    this.size,
     this.color,
     this.labelColor,
     this.onTap,
     this.textStyle,
+    this.fontSize = 10,
+    this.horizontalPadding = 10,
+    this.verticalPadding = 3,
   });
 
   @override
@@ -24,7 +30,10 @@ class SmallButton extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+          padding: EdgeInsets.symmetric(
+            horizontal: horizontalPadding,
+            vertical: verticalPadding,
+          ),
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(30),
@@ -34,7 +43,7 @@ class SmallButton extends StatelessWidget {
             textAlign: TextAlign.center,
             style: textStyle ??
                 TextStyle(
-                  fontSize: 10,
+                  fontSize: fontSize,
                   color: labelColor ?? Colors.white,
                 ),
           ),
