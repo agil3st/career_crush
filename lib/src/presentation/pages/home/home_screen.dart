@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/pages/home/cards_holder.dart';
+import 'package:career_crush/src/presentation/widgets/avatar/avatar.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
@@ -42,11 +43,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: Image.network(
-                    'https://i.pravatar.cc/300?img=1',
-                  ).image,
+                InkWell(
+                  child: const Avatar(
+                    id: 5,
+                  ),
+                  onTap: () => context.push(Routes.profile),
                 )
               ],
             ),
