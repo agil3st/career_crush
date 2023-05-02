@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/pages/home/cards_holder.dart';
+import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
 import 'package:career_crush/src/presentation/widgets/avatar/avatar.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
@@ -16,7 +17,8 @@ class HomeScreen extends StatelessWidget {
       padding: EdgeInsets.zero,
       showSettingsButton: true,
       showFooter: false,
-      body: Column(
+      body: ListView(
+        padding: const EdgeInsets.only(bottom: 120),
         children: [
           Container(
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
@@ -290,7 +292,91 @@ class HomeScreen extends StatelessWidget {
                 itemCount: 5,
               ),
             ),
-          )
+          ),
+          const SizedBox(height: 30),
+          CardsHolder(
+            title: 'Recent Job Post',
+            child: SizedBox(
+              height: 180,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                itemBuilder: (context, index) => Container(
+                  width: 150,
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: ColorName.jasmine.shade900,
+                    // border: Border.all(color: Colors.grey.shade300),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Center(
+                              child: Image.network(
+                                'https://uilogos.co/img/logomark/treva.png',
+                                height: 50,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          const Text(
+                            'UI/UX Designer',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                            ),
+                          ),
+                          const JobLocation(location: 'Jakarta, Indonesia'),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Full Time',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: ColorName.lavender,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Icon(
+                                FeatherIcons.star,
+                                size: 12,
+                                color: Colors.yellow.shade800,
+                              ),
+                              const SizedBox(width: 2),
+                              const Padding(
+                                padding: EdgeInsets.only(top: 2),
+                                child: Text(
+                                  '4.8',
+                                  style: TextStyle(fontSize: 10),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                separatorBuilder: (context, index) => const SizedBox(width: 10),
+                itemCount: 5,
+              ),
+            ),
+          ),
         ],
       ),
     );
