@@ -11,7 +11,7 @@ class RecommendedJobs extends StatelessWidget {
     return CardsHolder(
       title: 'Recommended',
       child: SizedBox(
-        height: 200,
+        height: 220,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.symmetric(horizontal: 20),

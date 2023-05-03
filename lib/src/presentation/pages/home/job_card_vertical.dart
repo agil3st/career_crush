@@ -48,8 +48,10 @@ class JobCardVertical extends StatelessWidget {
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 12,
+                  height: 1.24,
                 ),
               ),
+              const SizedBox(height: 2),
               Text(
                 job.company.name,
                 style: const TextStyle(

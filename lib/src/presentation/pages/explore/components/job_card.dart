@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/domain/models/job/job.dart';
+import 'package:career_crush/src/presentation/widgets/shimmers/shimmer_square.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
@@ -21,11 +22,19 @@ class JobCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              CachedNetworkImage(
-                imageUrl: job.company.logoUrl,
-                width: 50,
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: CachedNetworkImage(
+                  imageUrl: job.company.logoUrl,
+                  width: 50,
+                  placeholder: (context, url) => const ShimmerSquare(size: 50),
+                ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -39,7 +48,7 @@ class JobCard extends StatelessWidget {
                   Text(
                     job.company.name,
                     style: const TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: ColorName.lavender,
                       fontSize: 14,
                     ),
@@ -143,8 +152,9 @@ class JobCard extends StatelessWidget {
                   Text(
                     job.type,
                     style: const TextStyle(
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w500,
                       fontSize: 10,
+                      color: ColorName.lavender,
                     ),
                   ),
                   const Padding(
@@ -154,8 +164,9 @@ class JobCard extends StatelessWidget {
                   Text(
                     job.baseLocation,
                     style: const TextStyle(
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w500,
                       fontSize: 10,
+                      color: ColorName.lavender,
                     ),
                   ),
                 ],
@@ -169,7 +180,10 @@ class JobCard extends StatelessWidget {
                   const SizedBox(width: 2),
                   Text(
                     job.company.location.place,
-                    style: const TextStyle(fontSize: 10),
+                    style: const TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w500,
+                    ),
                   )
                 ],
               ),

@@ -15,7 +15,8 @@ class FeaturedJobs extends StatelessWidget {
         child: ListView.separated(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => JobCardTile(job: Job.jobList[index]),
+          itemBuilder: (context, index) =>
+              JobCardTile(job: Job.featuredJobs[index]),
           separatorBuilder: (context, index) => const SizedBox(width: 20),
           itemCount: Job.jobList.length,
         ),

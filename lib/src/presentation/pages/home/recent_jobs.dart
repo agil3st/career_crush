@@ -11,12 +11,12 @@ class RecentJobs extends StatelessWidget {
     return CardsHolder(
       title: 'Recent Job Post',
       child: SizedBox(
-        height: 200,
+        height: 220,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.symmetric(horizontal: 20),
           itemBuilder: (context, index) =>
-              JobCardVertical(job: Job.jobList[index]),
+              JobCardVertical(job: Job.recentJobs[index]),
           separatorBuilder: (context, index) => const SizedBox(width: 10),
           itemCount: Job.jobList.length,
         ),
