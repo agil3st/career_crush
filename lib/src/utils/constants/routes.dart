@@ -17,7 +17,7 @@ class Routes {
   static const eventLabel = 'Event';
 
   /* Screens */
-  static const jobDetail = '/job-detail';
+  static const jobDetail = '/job';
   static const jobFilter = '/job-filter';
   static const applicationForm = '/application-form';
 
