@@ -38,7 +38,7 @@ class Company {
   static Company company1 = Company(
     name: 'PT. Solaytic Jaya Abadi',
     companySize: "20 - 50",
-    logoUrl: 'https://uilogos.co/img/logotype/solaytic.png',
+    logoUrl: 'https://uilogos.co/img/logomark/solaytic.png',
     industry: "Kecantikan",
     website: "https://www.solaytic.com",
     location: Location.sidoarjo,
@@ -56,7 +56,7 @@ class Company {
   static Company company3 = Company(
     name: 'PT. Aven Makmur',
     companySize: "1000 - 5000",
-    logoUrl: 'https://uilogos.co/img/logotype/aven.png',
+    logoUrl: 'https://uilogos.co/img/logomark/aven.png',
     industry: "Finansial",
     website: "https://www.aven.co",
     location: Location.bandung,
