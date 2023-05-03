@@ -1,49 +1,54 @@
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class JobSummary extends StatelessWidget {
-  const JobSummary({super.key});
+  final Job job;
+  const JobSummary({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
-                'UI/UX Designer',
-                style: TextStyle(
+                job.title,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
+                  height: 1,
                 ),
               ),
               Text(
-                'Full Time',
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
+                job.salary,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: ColorName.lavender,
                   fontSize: 14,
                 ),
               ),
-              JobLocation(location: 'Jakarta, Indonesia'),
+              Text(
+                job.type,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                ),
+              ),
+              JobLocation(location: job.company.location.place),
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const Text(
-                '3.5jt - 5jt',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: ColorName.lavender,
-                  fontSize: 16,
-                ),
-              ),
               Row(
                 children: [
                   Icon(
@@ -52,11 +57,11 @@ class JobSummary extends StatelessWidget {
                     color: Colors.yellow.shade800,
                   ),
                   const SizedBox(width: 2),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 2),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
                     child: Text(
-                      '4.8',
-                      style: TextStyle(fontSize: 10),
+                      '${job.rating}',
+                      style: const TextStyle(fontSize: 10),
                     ),
                   ),
                 ],

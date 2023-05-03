@@ -99,7 +99,7 @@ class JobCardTile extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () => context.push(Routes.jobDetail),
+      onTap: () => context.push(Routes.jobDetail, extra: job),
     );
   }
 }

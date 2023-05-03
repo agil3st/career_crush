@@ -1,3 +1,4 @@
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_apply_button.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_company_logo.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_description.dart';
@@ -8,13 +9,15 @@ import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.da
 import 'package:flutter/material.dart';
 
 class JobDetailScreen extends StatelessWidget {
-  const JobDetailScreen({super.key});
+  final Job job;
+  const JobDetailScreen({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
     return PageScaffold(
       title: 'Job Detail',
       body: Stack(
+        fit: StackFit.expand,
         children: [
           Scrollbar(
             interactive: true,
@@ -23,12 +26,12 @@ class JobDetailScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  JobCompanyLogo(),
-                  JobTabs(),
-                  JobSummary(),
-                  JobDescription(),
-                  JobQualification()
+                children: [
+                  JobCompanyLogo(url: job.company.logoUrl),
+                  const JobTabs(),
+                  JobSummary(job: job),
+                  JobDescription(description: job.description),
+                  JobQualification(qualification: job.qualification)
                 ],
               ),
             ),

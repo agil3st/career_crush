@@ -285,7 +285,7 @@ class Job {
         description:
             "The Finance Manager will be responsible for overseeing financial operations, developing financial strategies, and analyzing financial data.",
         qualification:
-            "Bachelor's degree in Finance, Accounting or related field, minimum 5 years of experience in finance or related field, strong analytical and leadership skills.",
+            "- Bachelor's degree in Finance\n- Accounting or related field\n- minimum 5 years of experience in finance or related field\n- strong analytical and leadership skills.",
         rating: 5,
         type: "Full-time",
         placement: "Jakarta, Indonesia",

@@ -2,7 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class JobCompanyLogo extends StatelessWidget {
-  const JobCompanyLogo({super.key});
+  final String url;
+  const JobCompanyLogo({super.key, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class JobCompanyLogo extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Center(
         child: CachedNetworkImage(
-          imageUrl: 'https://uilogos.co/img/logomark/treva.png',
+          imageUrl: url,
           height: 80,
         ),
       ),

@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 class JobQualification extends StatelessWidget {
-  const JobQualification({super.key});
+  final String qualification;
+  const JobQualification({super.key, required this.qualification});
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +26,7 @@ class JobQualification extends StatelessWidget {
             height: 12,
           ),
           MarkdownBody(
-            data: ''
-                '- Nonumy gubergren nulla ipsum adipiscing sanctus sed'
-                '\n- luptatum ex aliquam takimata ut'
-                '\n- voluptua est nonumy eos option.'
-                '\n- No amet et eirmod. Dolor eum sed.'
-                '\n- Kasd magna clita autem voluptua voluptua eirmod sed dolor.'
-                '\n- Diam minim minim ut eirmod labore. '
-                '\n- Amet feugiat justo dolor facilisi dolore eleifend rebum aliquyam autem no et tempor eu elitr ullamcorper. '
-                '\n- Magna erat vel duo accusam iriure eu ut tincidunt takimata. '
-                '\n- Consectetuer rebum et et aliquyam stet sanctus facilisis esse elitr dolore diam.'
-                '\n- Voluptua rebum sit duo dolores diam erat dolores tempor. '
-                '\n- Nulla nihil vel kasd ad zzril elitr magna ea labore diam.'
-                '',
+            data: qualification,
             styleSheet: MarkdownStyleSheet.fromTheme(Themes().light).copyWith(
               pPadding: EdgeInsets.zero,
               listBulletPadding: EdgeInsets.zero,
