@@ -1,10 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/domain/models/event/career_event.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/small_button.dart';
+import 'package:career_crush/src/presentation/widgets/shimmers/shimmer_square.dart';
 import 'package:flutter/material.dart';
 
 class EventCard extends StatelessWidget {
-  const EventCard({super.key});
+  final CareerEvent careerEvent;
+  const EventCard({super.key, required this.careerEvent});
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +29,17 @@ class EventCard extends StatelessWidget {
       child: Row(
         children: [
           CachedNetworkImage(
-            imageUrl:
-                'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&dpr=1',
+            imageUrl: careerEvent.imageURL,
             imageBuilder: (context, imageProvider) => Container(
               width: 120,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
-              ),
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: imageProvider,
+                    fit: BoxFit.cover,
+                  )),
             ),
+            placeholder: (context, url) => const ShimmerSquare(size: 120),
           ),
           const SizedBox(width: 10),
           Expanded(
@@ -45,9 +50,9 @@ class EventCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Career Conference',
-                      style: TextStyle(
+                    Text(
+                      careerEvent.title,
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: ColorName.midnight,
@@ -55,7 +60,7 @@ class EventCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'Labore in dolor sed diam ut vel. In invidunt kasd sadipscing duo facilisi et stet dolores kasd labore adipiscing.',
+                      careerEvent.description,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style:
