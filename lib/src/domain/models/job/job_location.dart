@@ -25,7 +25,7 @@ class Location {
         "country": country,
       };
 
-  String get place => "$city, $state";
+  String get place => id > 0 ? "$city, $state" : "Online";
 
   static Location surabaya = Location(
       id: 1, city: "Surabaya", state: "Jawa Timur", country: "Indonesia");
@@ -41,4 +41,7 @@ class Location {
 
   static Location jakarta = Location(
       id: 5, city: "Jakarta", state: "DKI Jakarta", country: "Indonesia");
+
+  static Location online = Location(
+      id: 0, city: "Online", state: "DKI Jakarta", country: "Indonesia");
 }

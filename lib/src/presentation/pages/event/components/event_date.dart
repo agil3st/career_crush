@@ -2,12 +2,12 @@ import 'package:career_crush/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-class JobLocation extends StatelessWidget {
-  final String location;
+class EventDate extends StatelessWidget {
+  final String date;
   final Color color;
-  const JobLocation({
+  const EventDate({
     super.key,
-    required this.location,
+    required this.date,
     this.color = ColorName.midnight,
   });
 
@@ -16,16 +16,19 @@ class JobLocation extends StatelessWidget {
     return Row(
       children: [
         Icon(
-          FeatherIcons.mapPin,
+          FeatherIcons.calendar,
           size: 12,
           color: color.withOpacity(0.4),
         ),
         const SizedBox(width: 4),
-        Text(
-          location,
-          style: TextStyle(
-            fontSize: 10,
-            color: color,
+        Padding(
+          padding: const EdgeInsets.only(top: 2),
+          child: Text(
+            date,
+            style: TextStyle(
+              fontSize: 10,
+              color: color,
+            ),
           ),
         )
       ],

@@ -1,4 +1,5 @@
 import 'package:career_crush/src/domain/models/job/job_location.dart';
+import 'package:intl/intl.dart';
 
 class CareerEvent {
   int id;
@@ -25,6 +26,11 @@ class CareerEvent {
     required this.location,
   });
 
+  String get dateHumanReadable {
+    DateTime date = DateTime.parse(registrationCloseDate);
+    return DateFormat('dd MMMM, yyyy', 'id_ID').format(date);
+  }
+
   static List<CareerEvent> events = [
     CareerEvent(
       id: 1,
@@ -48,7 +54,7 @@ class CareerEvent {
       startDate: '2023-08-15',
       registeredUserCount: 10,
       quota: 200,
-      location: Location.surabaya,
+      location: Location.online,
       imageURL:
           'https://images.pexels.com/photos/3321789/pexels-photo-3321789.jpeg?auto=compress&cs=tinysrgb&w=400&h=350&dpr=1',
     ),
@@ -87,7 +93,7 @@ class CareerEvent {
       startDate: '2023-08-25',
       registeredUserCount: 10,
       quota: 300,
-      location: Location.bandung,
+      location: Location.online,
       imageURL:
           'https://images.pexels.com/photos/50675/banquet-wedding-society-deco-50675.jpeg?auto=compress&cs=tinysrgb&w=400&h=350&dpr=1',
     ),

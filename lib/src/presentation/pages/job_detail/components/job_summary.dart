@@ -1,6 +1,7 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
+import 'package:career_crush/src/presentation/pages/job_detail/components/job_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
@@ -45,29 +46,7 @@ class JobSummary extends StatelessWidget {
               JobLocation(location: job.company.location.place),
             ],
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    FeatherIcons.star,
-                    size: 12,
-                    color: Colors.yellow.shade800,
-                  ),
-                  const SizedBox(width: 2),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 2),
-                    child: Text(
-                      '${job.rating}',
-                      style: const TextStyle(fontSize: 10),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          )
+          JobRating(rating: job.rating)
         ],
       ),
     );
