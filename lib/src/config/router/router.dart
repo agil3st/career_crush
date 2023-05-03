@@ -1,4 +1,5 @@
 import 'package:career_crush/gen/assets.gen.dart';
+import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/domain/models/route/route.dart';
 import 'package:career_crush/src/presentation/pages/applications/application_screen.dart';
 import 'package:career_crush/src/presentation/pages/auth/forgot_password/forgot_password_screen.dart';
@@ -43,7 +44,10 @@ class AppRouter {
       ),
       GoRoute(
         path: Routes.jobDetail,
-        builder: (context, state) => const JobDetailScreen(),
+        builder: (context, state) {
+          Job job = state.extra as Job;
+          return JobDetailScreen(job: job);
+        },
       ),
       GoRoute(
         path: Routes.jobFilter,
