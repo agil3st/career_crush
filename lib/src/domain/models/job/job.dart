@@ -5,7 +5,7 @@ class Job {
   String salary;
   String description;
   String qualification;
-  int rating;
+  double rating;
   String type;
   String placement;
   String duration;
@@ -164,4 +164,241 @@ class Job {
       company: Company.company3,
     ),
   ];
+
+  static List<Job> featuredJobs = [
+    Job(
+        title: "Content Writer",
+        salary: "IDR 7.000.000 - 9.000.000",
+        description:
+            "We are looking for a creative and detail-oriented Content Writer to join our team. The Content Writer will be responsible for creating high-quality content for various mediums, including website, social media, and email.",
+        qualification:
+            "Bachelor's degree in English, Journalism, Marketing, or related field, minimum 2 years of experience in content writing or related field, excellent written and verbal communication skills, ability to work under tight deadlines.",
+        rating: 4,
+        type: "Full-time",
+        placement: "Remote",
+        duration: "Permanent",
+        category: "Writing",
+        graduation: "Bachelor's degree",
+        experience: "2 years",
+        baseLocation: "On-site",
+        company: Company.company5,
+        deadline: "August 31, 2022"),
+    // Data 2
+    Job(
+        title: "Graphic Designer",
+        salary: "IDR 8.000.000 - 10.000.000",
+        description:
+            "We are seeking a talented and creative Graphic Designer to join our team. The Graphic Designer will be responsible for creating visually appealing designs for various mediums, including print, digital, and social media.",
+        qualification:
+            "Bachelor's degree in Graphic Design, Fine Arts, or related field, minimum 3 years of experience in graphic design or related field, strong proficiency in Adobe Creative Suite, excellent attention to detail.",
+        rating: 4,
+        type: "Full-time",
+        placement: "Bandung, Indonesia",
+        duration: "Permanent",
+        category: "Design",
+        graduation: "Bachelor's degree",
+        experience: "3 years",
+        baseLocation: "On-site",
+        company: Company.company3,
+        deadline: "September 30, 2022"),
+    // Data 3
+    Job(
+      title: "Front-End Developer",
+      salary: "IDR 12.000.000 - 15.000.000",
+      description:
+          "We are looking for a skilled Front-End Developer to join our development team. The Front-End Developer will be responsible for building and maintaining web applications with a focus on user experience and design.",
+      qualification:
+          "Bachelor's degree in Computer Science, Information Technology, or related field, minimum 5 years of experience in front-end development or related field, strong proficiency in HTML, CSS, and JavaScript, experience with modern front-end frameworks such as React or Angular.",
+      rating: 4,
+      type: "Full-time",
+      placement: "Jakarta, Indonesia",
+      duration: "Permanent",
+      category: "Information Technology",
+      graduation: "Bachelor's degree",
+      experience: "5 years",
+      baseLocation: "On-site",
+      company: Company.company2,
+      deadline: "October 31, 2022",
+    ),
+    Job(
+      title: "Graphic Designer",
+      salary: "IDR 8.000.000 - 10.000.000",
+      description:
+          "The Graphic Designer will be responsible for creating visual concepts to communicate ideas that inspire, inform, or captivate consumers.",
+      qualification:
+          "Bachelor's degree in Graphic Design, Fine Arts, or related field, minimum 2 years of experience in graphic design or related field, proficiency in Adobe Creative Suite.",
+      rating: 4,
+      type: "Full-time",
+      placement: "Jakarta, Indonesia",
+      duration: "Permanent",
+      category: "Design",
+      graduation: "Bachelor's degree",
+      experience: "2 years",
+      baseLocation: "Remote",
+      company: Company.company1,
+      deadline: "August 31, 2022",
+    ),
+    // Data 4
+    Job(
+      title: "Finance Analyst",
+      salary: "IDR 12.000.000 - 15.000.000",
+      description:
+          "The Finance Analyst will be responsible for analyzing financial data and providing financial insights to support business decisions.",
+      qualification:
+          "Bachelor's degree in Finance, Accounting, or related field, minimum 3 years of experience in finance or related field, strong analytical skills and attention to detail.",
+      rating: 4,
+      type: "Full-time",
+      placement: "Jakarta, Indonesia",
+      duration: "Permanent",
+      category: "Finance",
+      graduation: "Bachelor's degree",
+      experience: "3 years",
+      baseLocation: "Remote",
+      company: Company.company1,
+      deadline: "September 15, 2022",
+    ),
+  ];
+
+  static List<Job> recentJobs = [
+    // Data 1
+    Job(
+        title: "Graphic Designer",
+        salary: "IDR 8.000.000 - 10.000.000",
+        description:
+            "The Graphic Designer will be responsible for creating visual concepts, using computer software or by hand, to communicate ideas that inspire, inform, and captivate consumers.",
+        qualification:
+            "Bachelor's degree in Graphic Design, Visual Communication or related field, minimum 2 years of experience in graphic design or related field, proficiency in Adobe Creative Suite.",
+        rating: 4,
+        type: "Full-time",
+        placement: "Jakarta, Indonesia",
+        duration: "Permanent",
+        category: "Design",
+        graduation: "Bachelor's degree",
+        experience: "2 years",
+        baseLocation: "On-site",
+        company: Company.company5,
+        deadline: "August 15, 2022"),
+    // Data 2
+    Job(
+        title: "Finance Manager",
+        salary: "IDR 15.000.000 - 20.000.000",
+        description:
+            "The Finance Manager will be responsible for overseeing financial operations, developing financial strategies, and analyzing financial data.",
+        qualification:
+            "Bachelor's degree in Finance, Accounting or related field, minimum 5 years of experience in finance or related field, strong analytical and leadership skills.",
+        rating: 5,
+        type: "Full-time",
+        placement: "Jakarta, Indonesia",
+        duration: "Permanent",
+        category: "Finance",
+        graduation: "Bachelor's degree",
+        experience: "5 years",
+        baseLocation: "On-site",
+        company: Company.company3,
+        deadline: "September 30, 2022"),
+    // Data 3
+    Job(
+        title: "Human Resources Manager",
+        salary: "IDR 12.000.000 - 15.000.000",
+        description:
+            "The Human Resources Manager will be responsible for managing HR operations, developing and implementing HR policies and programs, and providing support to employees.",
+        qualification:
+            "Bachelor's degree in Human Resources, Business Administration or related field, minimum 5 years of experience in HR or related field, strong communication and interpersonal skills.",
+        rating: 4,
+        type: "Full-time",
+        placement: "Jakarta, Indonesia",
+        duration: "Permanent",
+        category: "Human Resources",
+        graduation: "Bachelor's degree",
+        experience: "5 years",
+        baseLocation: "On-site",
+        company: Company.company2,
+        deadline: "October 31, 2022"),
+    // Data 4
+    Job(
+      title: "Content Writer",
+      salary: "IDR 6.000.000 - 8.000.000",
+      description:
+          "The Content Writer will be responsible for creating engaging and informative content for various platforms, including websites, social media, and marketing materials.",
+      qualification:
+          "Bachelor's degree in English, Communications or related field, minimum 2 years of experience in content writing or related field, excellent writing and editing skills.",
+      rating: 4,
+      type: "Full-time",
+      placement: "Jakarta, Indonesia",
+      duration: "Permanent",
+      category: "Content",
+      graduation: "Bachelor's degree",
+      experience: "2 years",
+      baseLocation: "On-site",
+      company: Company.company3,
+      deadline: "November 15, 2022",
+    ),
+    Job(
+      title: 'Digital Marketing Specialist',
+      salary: 'IDR 8,000,000 - IDR 10,000,000',
+      description:
+          'Develop and implement digital marketing strategies and campaigns.',
+      qualification: "Bachelor's degree in Marketing or related field.",
+      rating: 4.5,
+      type: 'Full-time',
+      placement: 'Remote',
+      duration: 'Permanent',
+      category: 'Marketing',
+      graduation: "Bachelor's degree",
+      experience: '2 years',
+      baseLocation: "Remote",
+      company: Company.company2,
+      deadline: '30 May 2023',
+    ),
+    Job(
+      title: 'Software Developer',
+      salary: 'IDR 10,000,000 - IDR 15,000,000',
+      description: 'Develop and maintain software applications.',
+      qualification: "Bachelor's degree in Computer Science or related field.",
+      rating: 4.0,
+      type: 'Full-time',
+      placement: 'Onsite',
+      duration: 'Permanent',
+      category: 'Information Technology',
+      graduation: "Bachelor's degree",
+      experience: '3 years',
+      baseLocation: "Remote",
+      company: Company.company5,
+      deadline: '15 June 2023',
+    ),
+    Job(
+      title: 'Content Writer',
+      salary: 'IDR 6,000,000 - IDR 8,000,000',
+      description: 'Create and publish engaging content for various platforms.',
+      qualification: "Bachelor's degree in Communications or related field.",
+      rating: 4.2,
+      type: 'Full-time',
+      placement: 'Remote',
+      duration: 'Permanent',
+      category: 'Media',
+      graduation: "Bachelor's degree",
+      experience: '1 year',
+      baseLocation: "Remote",
+      company: Company.company1,
+      deadline: '25 June 2023',
+    ),
+    Job(
+      title: 'Graphic Designer',
+      salary: 'IDR 5,000,000 - IDR 7,000,000',
+      description: 'Create visual concepts and designs for various projects.',
+      qualification: "Bachelor's degree in Graphic Design or related field.",
+      rating: 4.1,
+      type: 'Full-time',
+      placement: 'Onsite',
+      duration: 'Permanent',
+      category: 'Creative',
+      graduation: "Bachelor's degree",
+      experience: '2 years',
+      baseLocation: "Remote",
+      company: Company.company1,
+      deadline: '10 July 2023',
+    ),
+  ];
+
+  static List<Job> allJobs = [...recentJobs, ...featuredJobs, ...jobList];
 }
