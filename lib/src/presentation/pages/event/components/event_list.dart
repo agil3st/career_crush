@@ -10,8 +10,8 @@ class EventList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: true,
-      padding:
-          const EdgeInsets.fromLTRB(20, 20, 20, Constants.bottomListPadding),
+      padding: const EdgeInsets.fromLTRB(
+          20, 20, 20, Constants.bottomListPaddingValue),
       itemBuilder: (context, index) =>
           EventCard(careerEvent: CareerEvent.events[index]),
       separatorBuilder: (context, index) => const SizedBox(height: 20),

@@ -17,7 +17,7 @@ class SignUpScreen extends StatelessWidget {
     return WelcomeScaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.only(top: Constants.welcomeTopPadding),
+        padding: const EdgeInsets.only(top: Constants.welcomeTopPaddingValue),
         child: ListView(
           children: [
             Column(

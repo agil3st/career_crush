@@ -9,8 +9,8 @@ class JobList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding:
-          const EdgeInsets.fromLTRB(20, 20, 20, Constants.bottomListPadding),
+      padding: const EdgeInsets.fromLTRB(
+          20, 20, 20, Constants.bottomListPaddingValue),
       itemBuilder: (context, index) => JobCard(job: Job.allJobs[index]),
       separatorBuilder: (context, index) => const SizedBox(height: 20),
       itemCount: Job.jobList.length,

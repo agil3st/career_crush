@@ -11,7 +11,8 @@ class ApplicationList extends StatelessWidget {
     return ListView.separated(
       itemCount: JobApplication.appliedJobs.length,
       shrinkWrap: true,
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, Constants.bottomListPadding),
+      padding:
+          const EdgeInsets.fromLTRB(0, 0, 0, Constants.bottomListPaddingValue),
       itemBuilder: (context, index) =>
           ApplicationCard(jobApplication: JobApplication.appliedJobs[index]),
       separatorBuilder: (context, index) => const SizedBox(height: 20),

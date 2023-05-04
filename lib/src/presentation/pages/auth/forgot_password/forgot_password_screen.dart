@@ -16,7 +16,7 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return WelcomeScaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: Constants.welcomeTopPadding),
+        padding: const EdgeInsets.only(top: Constants.welcomeTopPaddingValue),
         child: ListView(
           children: [
             SizedBox(

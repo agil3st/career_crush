@@ -30,7 +30,7 @@ class WelcomeScaffold extends PageScaffold {
               Padding(
                 padding: padding ??
                     const EdgeInsets.symmetric(
-                      horizontal: Constants.horizontalPadding,
+                      horizontal: Constants.horizontalPaddingValue,
                     ),
                 child: body,
               ),

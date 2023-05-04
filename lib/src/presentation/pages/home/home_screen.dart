@@ -17,7 +17,8 @@ class HomeScreen extends StatelessWidget {
       showSettingsButton: true,
       showFooter: false,
       body: ListView(
-        padding: const EdgeInsets.only(bottom: Constants.bottomListPadding),
+        padding:
+            const EdgeInsets.only(bottom: Constants.bottomListPaddingValue),
         children: const [
           Greeting(),
           Articles(),
