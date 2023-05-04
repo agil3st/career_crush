@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/src/presentation/pages/auth/forgot_password/components/send_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
@@ -65,14 +66,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 20),
-                  child: FullButton(
-                    onPressed: () {},
-                    label: 'Send',
-                  ),
-                ),
+                const ForgotPasswordSendButton(),
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
