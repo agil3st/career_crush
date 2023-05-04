@@ -14,6 +14,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WelcomeScaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(top: Constants.welcomeTopPadding),
         child: ListView(
@@ -42,11 +43,13 @@ class SignUpScreen extends StatelessWidget {
                   CustomTextField(
                     label: 'Username',
                     hint: 'johnDoe007',
+                    keyboardType: TextInputType.name,
                   ),
                   CustomTextField.verticalSpacing,
                   CustomTextField(
                     label: 'Email',
                     hint: 'johndoe@email.com',
+                    keyboardType: TextInputType.emailAddress,
                   ),
                   CustomTextField.verticalSpacing,
                   CustomTextField(
