@@ -41,7 +41,7 @@ class JobCardVertical extends StatelessWidget {
                       height: 70,
                       imageUrl: job.company.logoUrl,
                       placeholder: (context, url) =>
-                          const ShimmerSquare(size: 50),
+                          const ShimmerSquare(size: 70),
                     ),
                   ),
                 ),
