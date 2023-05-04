@@ -23,8 +23,9 @@ class CustomTextField extends TextField {
             ),
             floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: hint,
-            hintStyle: const TextStyle(
-              fontWeight: FontWeight.w300,
+            hintStyle: TextStyle(
+              fontWeight: FontWeight.w400,
+              color: Colors.grey.shade400,
             ),
             contentPadding: const EdgeInsets.symmetric(
               vertical: 5,
