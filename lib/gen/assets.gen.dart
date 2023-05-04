@@ -40,12 +40,35 @@ class $AssetsImagesIllustrationsGen {
   SvgGenImage get forgotPassword =>
       const SvgGenImage('assets/images/illustrations/forgot-password.svg');
 
+  /// File path: assets/images/illustrations/onBoarding1.svg
+  SvgGenImage get onBoarding1 =>
+      const SvgGenImage('assets/images/illustrations/onBoarding1.svg');
+
+  /// File path: assets/images/illustrations/onBoarding2.svg
+  SvgGenImage get onBoarding2 =>
+      const SvgGenImage('assets/images/illustrations/onBoarding2.svg');
+
+  /// File path: assets/images/illustrations/onBoarding3.svg
+  SvgGenImage get onBoarding3 =>
+      const SvgGenImage('assets/images/illustrations/onBoarding3.svg');
+
+  /// File path: assets/images/illustrations/onBoarding4.svg
+  SvgGenImage get onBoarding4 =>
+      const SvgGenImage('assets/images/illustrations/onBoarding4.svg');
+
   /// File path: assets/images/illustrations/welcome.svg
   SvgGenImage get welcome =>
       const SvgGenImage('assets/images/illustrations/welcome.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [forgotPassword, welcome];
+  List<SvgGenImage> get values => [
+        forgotPassword,
+        onBoarding1,
+        onBoarding2,
+        onBoarding3,
+        onBoarding4,
+        welcome
+      ];
 }
 
 class $AssetsImagesIconsAppsGen {
