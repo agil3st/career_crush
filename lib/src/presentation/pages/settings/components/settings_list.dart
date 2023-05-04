@@ -59,7 +59,7 @@ class SettingsList extends ConsumerWidget {
         const SizedBox(height: 10),
         SettingButtonIcon(
           label: 'Terms & Conditions',
-          onTap: () {},
+          onTap: _openTermsConditionButton,
         ),
       ],
     );
@@ -78,6 +78,10 @@ class SettingsList extends ConsumerWidget {
   }
 
   void _openPrivacyPolicy() {
+    openExternalLink('https://www.agl.my.id/');
+  }
+
+  void _openTermsConditionButton() {
     openExternalLink('https://www.agl.my.id/');
   }
 }
