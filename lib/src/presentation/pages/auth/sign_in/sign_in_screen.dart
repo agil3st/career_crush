@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/gen/fonts.gen.dart';
+import 'package:career_crush/src/presentation/pages/auth/sign_in/components/remember_me.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
@@ -59,29 +60,7 @@ class SignInScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            constraints: const BoxConstraints(),
-                            padding: EdgeInsets.zero,
-                            icon: const Icon(
-                              FeatherIcons.checkSquare,
-                              size: 16,
-                            ),
-                          ),
-                          const SizedBox(width: 2),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 2),
-                            child: Text(
-                              'Remember me',
-                              style: TextStyle(
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      const RememberMe(),
                       InkWell(
                         child: Text(
                           'Forgot password?',
