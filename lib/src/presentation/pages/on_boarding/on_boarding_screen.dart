@@ -57,10 +57,12 @@ class OnBoardingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-                width: double.infinity,
-                child: FullButton(
-                    onPressed: () => context.go(Routes.signUp),
-                    label: 'Register'))
+              width: double.infinity,
+              child: FullButton(
+                onPressed: () => context.go(Routes.signUp),
+                label: 'Register',
+              ),
+            )
           ],
         ),
       ),
