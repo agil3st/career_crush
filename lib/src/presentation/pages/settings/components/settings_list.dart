@@ -2,10 +2,16 @@ import 'package:career_crush/src/presentation/pages/settings/components/settings
 import 'package:career_crush/src/presentation/pages/settings/components/settings_switches/email_notification_switch.dart';
 import 'package:career_crush/src/presentation/pages/settings/components/settings_switches/new_job_switch.dart';
 import 'package:career_crush/src/presentation/pages/settings/components/settings_switches/open_to_work_switch.dart';
+import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
+import 'package:career_crush/src/presentation/widgets/buttons/full_outlined_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/setting_button_icon.dart';
+import 'package:career_crush/src/presentation/widgets/dialogs/confirm_dialog.dart';
+import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:go_router/go_router.dart';
 
 class SettingsList extends ConsumerWidget {
   const SettingsList({super.key});
@@ -37,7 +43,7 @@ class SettingsList extends ConsumerWidget {
         const SizedBox(height: 10),
         SettingButtonIcon(
           label: 'Log Out',
-          onTap: () {},
+          onTap: _logout,
         ),
         const SizedBox(height: 10),
         SettingButtonIcon(
@@ -55,6 +61,18 @@ class SettingsList extends ConsumerWidget {
           onTap: () {},
         ),
       ],
+    );
+  }
+
+  void _logout() {
+    SmartDialog.show(
+      builder: (context) => ConfirmDialog(
+        title: 'Logout',
+        description: 'Continue logout from this account?',
+        onTap: () {
+          context.go(Routes.onBoarding);
+        },
+      ),
     );
   }
 }
