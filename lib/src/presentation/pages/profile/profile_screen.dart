@@ -1,6 +1,7 @@
 import 'package:career_crush/src/presentation/pages/profile/components/profile_about.dart';
 import 'package:career_crush/src/presentation/pages/profile/components/profile_card.dart';
 import 'package:career_crush/src/presentation/pages/profile/components/profile_stats.dart';
+import 'package:career_crush/src/presentation/pages/settings/components/settings_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageScaffold(
       title: 'My Profile',
+      actions: const [SettingsButton()],
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 40),
         children: const [

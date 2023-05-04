@@ -15,6 +15,8 @@ class Routes {
   static const applicationsLabel = 'Applications';
   static const event = '/event';
   static const eventLabel = 'Event';
+  static const profile = '/profile';
+  static const profileLabel = 'Profile';
 
   /* Screens */
   static const jobDetail = '/job';
@@ -22,6 +24,5 @@ class Routes {
   static const applicationForm = '/application-form';
 
   /* Settings */
-  static const profile = '/profile';
   static const settings = '/settings';
 }

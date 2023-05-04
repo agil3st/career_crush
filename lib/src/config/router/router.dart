@@ -68,25 +68,35 @@ class AppRouter {
 
   static List<AppRoute> bottomNav = [
     AppRoute(
-        label: Routes.homeLabel,
-        path: Routes.index,
-        icon: Assets.images.icons.apps.home.path,
-        screen: const HomeScreen()),
+      label: Routes.homeLabel,
+      path: Routes.index,
+      icon: Assets.images.icons.apps.home.path,
+      screen: const HomeScreen(),
+    ),
     AppRoute(
-        label: Routes.exploreLabel,
-        path: Routes.explore,
-        icon: Assets.images.icons.apps.search.path,
-        screen: const ExploreScreen()),
+      label: Routes.exploreLabel,
+      path: Routes.explore,
+      icon: Assets.images.icons.apps.search.path,
+      screen: const ExploreScreen(),
+    ),
     AppRoute(
-        label: Routes.applicationsLabel,
-        path: Routes.applications,
-        icon: Assets.images.icons.apps.document.path,
-        screen: const ApplicationsScreen()),
+      label: Routes.applicationsLabel,
+      path: Routes.applications,
+      icon: Assets.images.icons.apps.document.path,
+      screen: const ApplicationsScreen(),
+    ),
     AppRoute(
-        label: Routes.eventLabel,
-        path: Routes.event,
-        icon: Assets.images.icons.apps.calender.path,
-        screen: const EventScreen()),
+      label: Routes.eventLabel,
+      path: Routes.event,
+      icon: Assets.images.icons.apps.calender.path,
+      screen: const EventScreen(),
+    ),
+    AppRoute(
+      label: Routes.profileLabel,
+      path: Routes.profile,
+      icon: Assets.images.icons.apps.profile.path,
+      screen: const ProfileScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> build() {
