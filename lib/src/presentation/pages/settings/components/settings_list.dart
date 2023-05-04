@@ -6,6 +6,7 @@ import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_outlined_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/setting_button_icon.dart';
 import 'package:career_crush/src/presentation/widgets/dialogs/confirm_dialog.dart';
+import 'package:career_crush/src/presentation/widgets/dialogs/open_external_link_dialog.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
@@ -53,7 +54,7 @@ class SettingsList extends ConsumerWidget {
         const SizedBox(height: 10),
         SettingButtonIcon(
           label: 'Privacy Policy',
-          onTap: () {},
+          onTap: _openPrivacyPolicy,
         ),
         const SizedBox(height: 10),
         SettingButtonIcon(
@@ -74,5 +75,9 @@ class SettingsList extends ConsumerWidget {
         },
       ),
     );
+  }
+
+  void _openPrivacyPolicy() {
+    openExternalLink('https://www.agl.my.id/');
   }
 }
