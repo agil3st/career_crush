@@ -16,11 +16,13 @@ import 'package:career_crush/src/presentation/pages/profile/profile_screen.dart'
 import 'package:career_crush/src/presentation/pages/settings/settings_screen.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final router = GoRouter(
     initialLocation: Routes.onBoarding,
+    observers: [FlutterSmartDialog.observer],
     routes: [
       GoRoute(
         path: Routes.onBoarding,
