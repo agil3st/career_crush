@@ -16,9 +16,7 @@ class RememberMe extends ConsumerWidget {
       child: Row(
         children: [
           IconButton(
-            onPressed: () {
-              rememberMe.state = !rememberMe.state;
-            },
+            onPressed: () => rememberMe.state = !rememberMe.state,
             constraints: const BoxConstraints(),
             padding: EdgeInsets.zero,
             icon: Icon(
