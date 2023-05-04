@@ -1,4 +1,5 @@
 import 'package:career_crush/gen/colors.gen.dart';
+import 'package:career_crush/gen/fonts.gen.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
@@ -110,7 +111,10 @@ class SignInScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     text: "Don't have an account?",
-                    style: const TextStyle(color: Colors.grey),
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: FontFamily.poppins,
+                    ),
                     children: [
                       TextSpan(
                         text: ' Sign Up',
