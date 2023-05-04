@@ -14,6 +14,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WelcomeScaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(top: Constants.welcomeTopPadding),
         child: Column(
