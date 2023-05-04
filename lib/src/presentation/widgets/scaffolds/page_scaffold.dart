@@ -14,6 +14,7 @@ class PageScaffold extends Scaffold {
     bool centerTitle = false,
     List<Widget>? actions,
     PreferredSizeWidget? bottomAppBar,
+    super.resizeToAvoidBottomInset,
   }) : super(
           key: key,
           backgroundColor: Colors.white,
