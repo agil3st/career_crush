@@ -1,5 +1,4 @@
 import 'package:career_crush/src/presentation/pages/profile/components/profile_stats_button.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:flutter/material.dart';
 
 class ProfileStats extends StatelessWidget {

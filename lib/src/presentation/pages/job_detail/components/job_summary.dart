@@ -3,7 +3,6 @@ import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_rating.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class JobSummary extends StatelessWidget {
   final Job job;

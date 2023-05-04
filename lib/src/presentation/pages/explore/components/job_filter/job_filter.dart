@@ -1,4 +1,3 @@
-import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/chips/labeled_chips.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';

@@ -6,7 +6,7 @@ import 'package:career_crush/src/presentation/pages/auth/forgot_password/forgot_
 import 'package:career_crush/src/presentation/pages/auth/sign_in/sign_in_screen.dart';
 import 'package:career_crush/src/presentation/pages/auth/sign_up/sign_up_screen.dart';
 import 'package:career_crush/src/presentation/pages/event/event_screen.dart';
-import 'package:career_crush/src/presentation/pages/explore/components/job_filter/job_fiter.dart';
+import 'package:career_crush/src/presentation/pages/explore/components/job_filter/job_filter.dart';
 import 'package:career_crush/src/presentation/pages/explore/explore_screen.dart';
 import 'package:career_crush/src/presentation/pages/home/home_screen.dart';
 import 'package:career_crush/src/presentation/pages/index/index_screen.dart';
@@ -20,7 +20,7 @@ import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final router = GoRouter(
-    // initialLocation: Routes.onBoarding,
+    initialLocation: Routes.onBoarding,
     routes: [
       GoRoute(
         path: Routes.onBoarding,

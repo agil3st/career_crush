@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:career_crush/src/domain/models/job/job.dart';
 import 'package:flutter/material.dart';
 

@@ -12,7 +12,7 @@ class SettingScreen extends StatelessWidget {
     return PageScaffold(
       title: 'Settings',
       body: ListView(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 40),
         children: const [
           ProfileTile(),
           SizedBox(height: 40),
