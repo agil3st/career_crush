@@ -9,6 +9,7 @@ class FullButton extends FilledButton {
     EdgeInsets? padding,
     Color? color,
     Widget? text,
+    bool isLoading = false,
     double fontSize = 18,
   }) : super(
           style: ButtonStyle(
@@ -19,13 +20,25 @@ class FullButton extends FilledButton {
               padding ?? const EdgeInsets.symmetric(vertical: 10),
             ),
           ),
-          child: text ??
-              Text(
-                label,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: fontSize,
-                ),
-              ),
+          child: isLoading
+              ? const Padding(
+                  padding: EdgeInsets.all(5.6),
+                  child: SizedBox(
+                    width: 16,
+                    height: 16,
+                    child: CircularProgressIndicator(
+                      color: Colors.white,
+                      strokeWidth: 2,
+                    ),
+                  ),
+                )
+              : text ??
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: fontSize,
+                    ),
+                  ),
         );
 }
