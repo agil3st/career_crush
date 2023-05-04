@@ -15,6 +15,7 @@ class WelcomeScaffold extends PageScaffold {
     EdgeInsets? padding,
     List<Widget>? actions,
     super.bottomAppBar,
+    super.resizeToAvoidBottomInset,
   }) : super(
           key: key,
           titleWidget: const Logo(),
