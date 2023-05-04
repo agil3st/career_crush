@@ -1,7 +1,7 @@
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class SendResetLinkNotifier extends ChangeNotifier {
   bool status = false;
@@ -13,9 +13,7 @@ class SendResetLinkNotifier extends ChangeNotifier {
     await Future.delayed(const Duration(seconds: 3));
     status = false;
     notifyListeners();
-    Fluttertoast.showToast(
-      msg: "Password reset link sent!",
-    );
+    SmartDialog.showToast("Password reset link sent!");
   }
 }
 
