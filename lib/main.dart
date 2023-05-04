@@ -5,6 +5,7 @@ import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       title: Constants.appTitle,
       color: Colors.white,
       theme: Themes().light,
+      builder: FlutterSmartDialog.init(),
     );
   }
 }
