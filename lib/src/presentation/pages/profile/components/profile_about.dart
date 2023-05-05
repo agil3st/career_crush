@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/pages/job_detail/components/job_location.dart';
+import 'package:career_crush/src/presentation/pages/profile/components/profile_education.dart';
 import 'package:career_crush/src/presentation/widgets/chips/chips.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class ProfileAbout extends StatelessWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         const Divider(),
         const SizedBox(height: 14),
@@ -68,6 +70,8 @@ class ProfileAbout extends StatelessWidget {
             Chips(values: skills)
           ],
         ),
+        const SizedBox(height: 20),
+        const ProfileEducation(),
       ],
     );
   }

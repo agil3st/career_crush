@@ -1,5 +1,6 @@
 import 'package:career_crush/src/presentation/pages/profile/components/profile_about.dart';
 import 'package:career_crush/src/presentation/pages/profile/components/profile_card.dart';
+import 'package:career_crush/src/presentation/pages/profile/components/profile_education.dart';
 import 'package:career_crush/src/presentation/pages/profile/components/profile_stats.dart';
 import 'package:career_crush/src/presentation/pages/settings/components/settings_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/page_scaffold.dart';
