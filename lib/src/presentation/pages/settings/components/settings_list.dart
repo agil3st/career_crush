@@ -5,6 +5,7 @@ import 'package:career_crush/src/presentation/pages/settings/components/settings
 import 'package:career_crush/src/presentation/widgets/buttons/setting_button_icon.dart';
 import 'package:career_crush/src/presentation/widgets/dialogs/confirm_dialog.dart';
 import 'package:career_crush/src/presentation/widgets/dialogs/open_external_link_dialog.dart';
+import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
@@ -56,7 +57,7 @@ class SettingsList extends ConsumerWidget {
         ),
         const SizedBox(height: 10),
         SettingButtonIcon(
-          label: 'Terms & Conditions',
+          label: 'Terms of Services',
           onTap: _openTermsConditionButton,
         ),
       ],
@@ -65,6 +66,7 @@ class SettingsList extends ConsumerWidget {
 
   void _logout({required Function onSuccess}) {
     SmartDialog.show(
+      animationTime: Constants.defaultDialogAnimationTime,
       builder: (context) => ConfirmDialog(
         title: 'Logout',
         description: 'Continue logout from this account?',
@@ -78,16 +80,21 @@ class SettingsList extends ConsumerWidget {
           await Future.delayed(const Duration(seconds: 3));
           SmartDialog.dismiss();
           onSuccess();
+          await Future.delayed(const Duration(seconds: 1));
+          SmartDialog.showNotify(
+            msg: 'Logout success!',
+            notifyType: NotifyType.success,
+          );
         },
       ),
     );
   }
 
   void _openPrivacyPolicy() {
-    openExternalLink('https://www.agl.my.id/');
+    openExternalLink('https://www.careercrush.com/privacy-policy/');
   }
 
   void _openTermsConditionButton() {
-    openExternalLink('https://www.agl.my.id/');
+    openExternalLink('https://www.careercrush.com/terms-of-services/');
   }
 }

@@ -30,10 +30,10 @@ class ProfileEducation extends StatelessWidget {
           theme: TimelineThemeData(
             color: ColorName.lavender.shade200,
             nodePosition: 0,
-            connectorTheme: ConnectorThemeData(
+            connectorTheme: const ConnectorThemeData(
               thickness: 1.6,
             ),
-            indicatorTheme: IndicatorThemeData(
+            indicatorTheme: const IndicatorThemeData(
               size: 10,
             ),
           ),
@@ -51,7 +51,7 @@ class ProfileEducation extends StatelessWidget {
                   educations[index],
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12,
                   ),
                 ),
