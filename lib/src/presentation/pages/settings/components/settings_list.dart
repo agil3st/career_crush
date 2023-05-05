@@ -70,7 +70,11 @@ class SettingsList extends ConsumerWidget {
         description: 'Continue logout from this account?',
         onTap: () async {
           SmartDialog.dismiss();
-          SmartDialog.showLoading(msg: 'Logging out...');
+          SmartDialog.showLoading(
+            msg: 'Logging out...',
+            clickMaskDismiss: false,
+            backDismiss: false,
+          );
           await Future.delayed(const Duration(seconds: 3));
           SmartDialog.dismiss();
           onSuccess();
