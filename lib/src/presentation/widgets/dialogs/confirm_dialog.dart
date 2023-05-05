@@ -6,11 +6,13 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 class ConfirmDialog extends StatelessWidget {
   final String title;
   final String description;
+  final Widget? caption;
   final Function? onTap;
   const ConfirmDialog({
     super.key,
     required this.title,
     required this.description,
+    this.caption,
     this.onTap,
   });
 
@@ -42,6 +44,8 @@ class ConfirmDialog extends StatelessWidget {
               fontSize: 14,
             ),
           ),
+          if (caption != null) const SizedBox(height: 4),
+          caption ?? Container(),
           const SizedBox(height: 34),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
