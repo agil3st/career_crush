@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/gen/fonts.gen.dart';
+import 'package:career_crush/src/presentation/pages/auth/components/password_field.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
@@ -7,7 +8,11 @@ import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
+final passwordProvider = StateProvider<bool>((ref) => true);
+final repasswordProvider = StateProvider<bool>((ref) => true);
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -45,24 +50,27 @@ class SignUpScreen extends StatelessWidget {
                     label: 'Username',
                     hint: 'johnDoe007',
                     keyboardType: TextInputType.name,
+                    textInputAction: TextInputAction.next,
                   ),
                   CustomTextField.verticalSpacing,
                   CustomTextField(
                     label: 'Email',
                     hint: 'johndoe@email.com',
                     keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
                   ),
                   CustomTextField.verticalSpacing,
-                  CustomTextField(
+                  PasswordField(
+                    toggleProvider: passwordProvider,
                     label: 'Password',
                     hint: 'Enter your password',
-                    obscureText: true,
+                    textInputAction: TextInputAction.next,
                   ),
                   CustomTextField.verticalSpacing,
-                  CustomTextField(
+                  PasswordField(
+                    toggleProvider: repasswordProvider,
                     label: 'Confirm Password',
                     hint: 'Enter your password one more time',
-                    obscureText: true,
                   ),
                 ],
               ),

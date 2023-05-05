@@ -5,6 +5,7 @@ import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
+import 'package:career_crush/src/utils/soft_keyboard.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -51,6 +52,8 @@ class ForgotPasswordScreen extends StatelessWidget {
                   CustomTextField(
                     label: 'Email',
                     hint: 'johndoe@email.com',
+                    keyboardType: TextInputType.emailAddress,
+                    inputFormatters: [SoftKeyboard.emailSymbols],
                   ),
                   CustomTextField.verticalSpacing,
                   TextButton(

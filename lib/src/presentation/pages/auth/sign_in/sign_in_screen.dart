@@ -1,5 +1,6 @@
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/gen/fonts.gen.dart';
+import 'package:career_crush/src/presentation/pages/auth/components/password_field.dart';
 import 'package:career_crush/src/presentation/pages/auth/sign_in/components/remember_me.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
@@ -8,8 +9,10 @@ import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
+final passwordProvider = StateProvider<bool>((ref) => true);
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -49,12 +52,14 @@ class SignInScreen extends StatelessWidget {
                   CustomTextField(
                     label: 'Email',
                     hint: 'johndoe@email.com',
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
                   ),
                   CustomTextField.verticalSpacing,
-                  CustomTextField(
+                  PasswordField(
+                    toggleProvider: passwordProvider,
                     label: 'Password',
                     hint: 'Enter your password',
-                    obscureText: true,
                   ),
                   CustomTextField.verticalSpacing,
                   Row(
