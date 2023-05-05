@@ -3,6 +3,7 @@ import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:go_router/go_router.dart';
 
 class SignInNotifier extends ChangeNotifier {
@@ -16,6 +17,12 @@ class SignInNotifier extends ChangeNotifier {
     status = false;
     notifyListeners();
     onSuccess();
+    await Future.delayed(const Duration(seconds: 1));
+    SmartDialog.showNotify(
+      msg: 'Login success!',
+      notifyType: NotifyType.success,
+      displayTime: const Duration(seconds: 3),
+    );
   }
 }
 
