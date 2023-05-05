@@ -6,6 +6,7 @@ import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
+import 'package:career_crush/src/utils/soft_keyboard.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -51,12 +52,14 @@ class SignUpScreen extends StatelessWidget {
                     hint: 'johnDoe007',
                     keyboardType: TextInputType.name,
                     textInputAction: TextInputAction.next,
+                    inputFormatters: SoftKeyboard.urlFormat,
                   ),
                   CustomTextField.verticalSpacing,
                   CustomTextField(
                     label: 'Email',
                     hint: 'johndoe@email.com',
                     keyboardType: TextInputType.emailAddress,
+                    inputFormatters: [SoftKeyboard.emailSymbols],
                     textInputAction: TextInputAction.next,
                   ),
                   CustomTextField.verticalSpacing,
