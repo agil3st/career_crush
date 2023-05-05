@@ -2,6 +2,7 @@ import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/gen/fonts.gen.dart';
 import 'package:career_crush/src/presentation/pages/auth/components/password_field.dart';
 import 'package:career_crush/src/presentation/pages/auth/sign_in/components/remember_me.dart';
+import 'package:career_crush/src/presentation/pages/auth/sign_in/components/sign_in_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
@@ -85,14 +86,7 @@ class SignInScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.fromLTRB(0, 60, 0, 20),
-                  child: FullButton(
-                    onPressed: () => context.go(Routes.home),
-                    label: 'Sign In',
-                  ),
-                ),
+                const SignInButton(),
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
