@@ -1,11 +1,12 @@
-import 'package:career_crush/src/presentation/widgets/dialogs/confirm_dialog.dart';
+import 'package:career_crush/src/presentation/widgets/dialogs/open_link_confirm_dialog.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 void openExternalLink(String url) {
   SmartDialog.show(
-    builder: (context) => ConfirmDialog(
+    builder: (context) => OpenLinkConfirmDialog(
       title: 'Open Link',
-      description: 'Continue open this link to external browser?',
+      description: 'Open this link on external browser?',
+      url: url,
       onTap: () {},
     ),
   );
