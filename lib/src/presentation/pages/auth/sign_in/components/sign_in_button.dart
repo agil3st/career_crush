@@ -1,4 +1,3 @@
-import 'package:career_crush/src/presentation/pages/auth/forgot_password/components/send_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/utils/constants/routes.dart';
 import 'package:flutter/material.dart';

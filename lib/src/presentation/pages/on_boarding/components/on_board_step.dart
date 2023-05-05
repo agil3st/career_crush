@@ -1,4 +1,3 @@
-import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

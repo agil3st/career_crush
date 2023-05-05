@@ -3,7 +3,6 @@ import 'package:career_crush/gen/fonts.gen.dart';
 import 'package:career_crush/src/presentation/pages/auth/components/password_field.dart';
 import 'package:career_crush/src/presentation/pages/auth/sign_in/components/remember_me.dart';
 import 'package:career_crush/src/presentation/pages/auth/sign_in/components/sign_in_button.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';

@@ -1,7 +1,6 @@
 import 'package:career_crush/gen/assets.gen.dart';
 import 'package:career_crush/gen/colors.gen.dart';
 import 'package:career_crush/src/presentation/pages/auth/forgot_password/components/send_button.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
 import 'package:career_crush/src/presentation/widgets/scaffolds/welcome_scaffold.dart';
 import 'package:career_crush/src/presentation/widgets/text_fields/custom_text_field.dart';
 import 'package:career_crush/src/utils/constants/constants.dart';
