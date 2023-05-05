@@ -2,8 +2,6 @@ import 'package:career_crush/src/presentation/pages/settings/components/settings
 import 'package:career_crush/src/presentation/pages/settings/components/settings_switches/email_notification_switch.dart';
 import 'package:career_crush/src/presentation/pages/settings/components/settings_switches/new_job_switch.dart';
 import 'package:career_crush/src/presentation/pages/settings/components/settings_switches/open_to_work_switch.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/full_button.dart';
-import 'package:career_crush/src/presentation/widgets/buttons/full_outlined_button.dart';
 import 'package:career_crush/src/presentation/widgets/buttons/setting_button_icon.dart';
 import 'package:career_crush/src/presentation/widgets/dialogs/confirm_dialog.dart';
 import 'package:career_crush/src/presentation/widgets/dialogs/open_external_link_dialog.dart';
@@ -44,7 +42,7 @@ class SettingsList extends ConsumerWidget {
         const SizedBox(height: 10),
         SettingButtonIcon(
           label: 'Log Out',
-          onTap: _logout,
+          onTap: () => _logout(onSuccess: () => context.go(Routes.onBoarding)),
         ),
         const SizedBox(height: 10),
         SettingButtonIcon(
@@ -65,13 +63,17 @@ class SettingsList extends ConsumerWidget {
     );
   }
 
-  void _logout() {
+  void _logout({required Function onSuccess}) {
     SmartDialog.show(
       builder: (context) => ConfirmDialog(
         title: 'Logout',
         description: 'Continue logout from this account?',
-        onTap: () {
-          context.go(Routes.onBoarding);
+        onTap: () async {
+          SmartDialog.dismiss();
+          SmartDialog.showLoading(msg: 'Logging out...');
+          await Future.delayed(const Duration(seconds: 3));
+          SmartDialog.dismiss();
+          onSuccess();
         },
       ),
     );
