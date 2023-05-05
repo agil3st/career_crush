@@ -9,6 +9,7 @@ class Constants {
   static const double onBoardHorizontalPaddingValue = 30;
   static const double welcomeTopPaddingValue = 70;
   static const double bottomListPaddingValue = 120;
+  static const Duration defaultDialogAnimationTime = Duration(milliseconds: 80);
 
   static const EdgeInsets horizontalPadding = EdgeInsets.symmetric(
     horizontal: horizontalPaddingValue,
