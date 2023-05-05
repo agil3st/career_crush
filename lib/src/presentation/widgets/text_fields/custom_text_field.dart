@@ -5,6 +5,8 @@ class CustomTextField extends TextField {
     super.key,
     required String label,
     required String hint,
+    Widget? suffix,
+    BoxConstraints? suffixConstraint,
     super.textInputAction,
     super.keyboardType,
     super.inputFormatters,
@@ -31,6 +33,8 @@ class CustomTextField extends TextField {
               vertical: 5,
               horizontal: 5,
             ),
+            suffixIcon: suffix,
+            suffixIconConstraints: suffixConstraint,
           ),
         );
 
