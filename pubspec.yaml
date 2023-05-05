@@ -45,6 +45,7 @@ dependencies:
   cached_network_image: ^3.2.3
   fade_shimmer: ^2.2.0
   flutter_smart_dialog: ^4.9.0+6
+  timelines: ^0.1.0
 
 dev_dependencies:
   flutter_test:
