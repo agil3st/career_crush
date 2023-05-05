@@ -36,7 +36,7 @@ class FullButton extends FilledButton {
                   Text(
                     label,
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w700,
                       fontSize: fontSize,
                     ),
                   ),
