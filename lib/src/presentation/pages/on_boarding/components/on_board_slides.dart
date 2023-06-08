@@ -12,23 +12,20 @@ class OnBoardSlides extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final slideController = ref.read(onBoardSlideProvider.notifier);
-    return SizedBox(
-      height: 500,
-      child: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          slideController.state = index;
-        },
-        children: OnBoardSlide.slides
-            .map(
-              (e) => OnBoardStep(
-                title: e.title,
-                description: e.description,
-                illustration: e.image,
-              ),
-            )
-            .toList(),
-      ),
+    return PageView(
+      controller: _pageController,
+      onPageChanged: (index) {
+        slideController.state = index;
+      },
+      children: OnBoardSlide.slides
+          .map(
+            (e) => OnBoardStep(
+              title: e.title,
+              description: e.description,
+              illustration: e.image,
+            ),
+          )
+          .toList(),
     );
   }
 }
