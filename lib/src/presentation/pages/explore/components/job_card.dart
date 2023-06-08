@@ -39,25 +39,27 @@ class JobCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      job.title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        job.title,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
                       ),
-                    ),
-                    Text(
-                      job.company.name,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: ColorName.lavender,
-                        fontSize: 14,
+                      Text(
+                        job.company.name,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorName.lavender,
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
