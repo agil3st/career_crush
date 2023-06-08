@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends PreferredSize {
-  SearchBar({
+class CustomSearchBar extends PreferredSize {
+  CustomSearchBar({
     super.key,
     bool autoFocus = false,
   }) : super(
