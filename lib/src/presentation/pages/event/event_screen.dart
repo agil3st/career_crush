@@ -15,7 +15,8 @@ class EventScreen extends ConsumerWidget {
       showFooter: false,
       padding: EdgeInsets.zero,
       actions: const [SearchButton()],
-      bottomAppBar: showSearchBar ? SearchBar(autoFocus: showSearchBar) : null,
+      bottomAppBar:
+          showSearchBar ? CustomSearchBar(autoFocus: showSearchBar) : null,
       body: const EventList(),
     );
   }
