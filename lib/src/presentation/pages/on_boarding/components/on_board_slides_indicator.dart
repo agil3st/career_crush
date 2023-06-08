@@ -12,7 +12,7 @@ class OnBoardSlidesIndicator extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 40),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       alignment: Alignment.center,
       child: DotsIndicator(
         dotsCount: OnBoardSlide.slides.length,

@@ -16,23 +16,41 @@ class OnBoardingScreen extends StatelessWidget {
     return WelcomeScaffold(
       resizeToAvoidBottomInset: false,
       padding: EdgeInsets.zero,
-      body: Padding(
-        padding: const EdgeInsets.only(top: Constants.welcomeTopPaddingValue),
-        child: Column(
-          children: [
-            const OnBoardTitle(),
-            OnBoardSlides(),
-            const OnBoardSlidesIndicator(),
-            Container(
-              width: double.infinity,
-              padding: Constants.onBoardHorizontalPadding,
-              child: FullButton(
-                onPressed: () => context.go(Routes.signUp),
-                label: 'Register',
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              // color: Colors.yellow,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 10),
+                  const OnBoardTitle(),
+                  Flexible(child: OnBoardSlides()),
+                ],
               ),
-            )
-          ],
-        ),
+            ),
+          ),
+          Container(
+            // color: Colors.pink,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                const OnBoardSlidesIndicator(),
+                Container(
+                  width: double.infinity,
+                  padding: Constants.onBoardHorizontalPadding,
+                  child: FullButton(
+                    onPressed: () => context.go(Routes.signUp),
+                    label: 'Register',
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 40)
+        ],
       ),
     );
   }
