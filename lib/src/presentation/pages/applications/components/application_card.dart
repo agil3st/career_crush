@@ -39,25 +39,27 @@ class ApplicationCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        jobApplication.job.title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          jobApplication.job.title,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                      Text(
-                        jobApplication.job.salary,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: ColorName.lavender,
-                          fontSize: 14,
+                        Text(
+                          jobApplication.job.salary,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: ColorName.lavender,
+                            fontSize: 14,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
